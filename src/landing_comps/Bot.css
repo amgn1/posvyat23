@@ -1,0 +1,126 @@
+.box {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.box .bot-wrapper {
+    border: 0px none;
+    height: 1261px;
+    width: 1370px;
+}
+
+.box .bot {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 100px;
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+
+.box .div {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 100px;
+    position: relative;
+}
+
+.box .div-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 130px;
+    position: relative;
+}
+
+.box .rectangle {
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    height: 487px;
+    position: relative;
+    width: 670px;
+}
+
+.box .txt {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.box .text-wrapper {
+    color: #000000;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 64px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.box .element {
+    color: #000000;
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 27.6px;
+    position: relative;
+    width: 570px;
+}
+
+.box .text-wrapper-2 {
+    color: #000000;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 64px;
+    margin-top: -1px;
+    position: relative;
+    width: 412px;
+}
+
+.box .rectangle-2 {
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    height: 450px;
+    position: relative;
+    width: 670px;
+}
+
+.box .btn {
+    align-items: center;
+    border: 5px solid;
+    border-color: #000000;
+    border-radius: 90px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 30px 60px;
+    position: relative;
+}
+
+.box .text-wrapper-3 {
+    color: #000000;
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 64px;
+    margin-top: -5px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
