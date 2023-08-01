@@ -1,0 +1,70 @@
+.about {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.about .element-about-wrapper {
+    border: 0px none;
+    height: 851px;
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    margin-left: 10.3587%;
+    margin-right: 10.3587%;
+    padding: 0;
+}
+
+.about .element-about {
+    height: 851px;
+    
+    position: relative;
+    padding: 0%;
+    margin: 0%;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 55.959304%;
+}
+
+
+.about .text-wrapper {
+    color: #000000;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 121.4px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 128.1px;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+}
+
+.about .highway-to-hell {
+    color: #000000;
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    justify-content: left;
+    letter-spacing: 0;
+    line-height: 36.8px;
+    position: relative;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0%;
+    width: 100%;
+}
+
+.about .photo {
+    background-color: #d9d9d9;
+    height: 700px;
+    position: relative;
+    margin-top: 151px;
+    margin-left: 35.9px;
+    width: 41.459854%;
+}
