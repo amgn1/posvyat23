@@ -1,0 +1,43 @@
+.box {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    }
+    .box .element-adv-wrapper {
+    border: 0px none;
+    height: 3785px;
+    overflow-x: hidden;
+    position: relative;
+    width: 1378px;
+    }
+    .box .element-adv {
+    height: 3785px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 1380px;
+    }
+    .box .text-wrapper {
+    color: #000000;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 159px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 159px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    }
+    .box .benefits {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 40px;
+    left: 103px;
+    position: absolute;
+    top: 219px;
+    }
+    

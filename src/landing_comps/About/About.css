@@ -1,0 +1,104 @@
+.about {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: -10;
+    background-color: var(--background);
+    position: relative;
+
+}
+
+.about_photo {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    top: 10%;
+}
+
+.about_photo_2 {
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top: 58%;
+}
+
+.element-about-wrapper {
+    padding: 4% 8% 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text__wrapper{
+    display: flex;
+    justify-content: end;
+}
+
+.text_2 {
+    justify-content: start;
+}
+
+.text {
+    color: var(--background_black);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 115%; /* 34.5px */
+    text-align: left;
+    margin-top: 8%;
+    width: 743px;
+    display: block;
+    margin-right: 0;
+}
+
+.text_2 {
+    width: 538px;
+    margin-top: 40%;
+}
+
+
+.sun {
+    position: absolute;
+    width: 45%;
+    left: 45%;
+    top: 37%;
+}
+
+.btn {
+    background: url('../../ui/mock/btn_outline.png');
+    box-sizing: border-box;
+    width: 300px;
+    align-items: center;
+    color: var(--background_black);
+    font-size: 34px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 15px 30px;
+    position: relative;
+    margin-top: 9%;
+}
+
+.about .element-about {
+    
+    position: relative;
+    padding: 0%;
+    margin: 0%;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 60px;
+    /* width: 55.959304%; */
+}
+
+
+.about .text-wrapper {
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 121.4px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 128.1px;
+    text-align: center;
+    color: var(--background_black);
+    /* position: relative; */
+    width: 100%;
+    margin: 0%;
+}

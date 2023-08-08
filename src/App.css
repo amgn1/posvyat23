@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Kyiv Region-Regular"; 
+  src: url(./fonts/KyivRegion-Regular.ttf); /*URL to font*/
+}
+
+@font-face {
+  font-family: "Object Sans-Regular"; 
+  src: url(./fonts/ObjectSans-Regular.otf); /*URL to font*/
+}
+
+@font-face {
+  font-family: "Raleway-Medium"; 
+  src: url(./fonts/ofont.ru_Raleway.ttf); /*URL to font*/
+}

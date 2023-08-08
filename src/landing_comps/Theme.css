@@ -1,0 +1,112 @@
+.box {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.box .element-theme-wrapper {
+    border: 0px none;
+    height: 892px;
+    overflow-x: hidden;
+    position: relative;
+    width: 1370px;
+}
+
+.box .element-theme {
+    height: 892px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 1372px;
+}
+
+.box .text-wrapper {
+    color: #000000;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 128px;
+    font-weight: 400;
+    left: 264px;
+    letter-spacing: 0;
+    line-height: 128px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+}
+
+.box .cards {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 35px;
+    left: 0;
+    position: absolute;
+    top: 188px;
+}
+
+.box .card {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.box .rectangle {
+    background-color: #d9d9d9;
+    height: 460px;
+    position: relative;
+    width: 420px;
+}
+
+.box .div {
+    color: #000000;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 64px;
+    position: relative;
+    width: 420px;
+}
+
+.box .p {
+    color: #000000;
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 27.6px;
+    position: relative;
+    width: 420px;
+}
+
+.box .rectangle-2 {
+    background-color: #d9d9d9;
+    height: 460px;
+    position: relative;
+    width: 460px;
+}
+
+.box .text-wrapper-2 {
+    color: #000000;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 64px;
+    position: relative;
+    width: 460px;
+}
+
+.box .text-wrapper-3 {
+    color: #000000;
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 27.6px;
+    position: relative;
+    width: 460px;
+}

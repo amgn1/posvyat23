@@ -1,0 +1,122 @@
+
+.nv_container{
+    margin: 0;
+    padding: 0;
+    height: 170px;
+    padding: 30px 178px 30px 179px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background_black);
+    
+}
+
+.nv_list {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.nv_list_item {
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--background);
+    font-weight: 400;
+    font-size: 20px;
+}
+.nav-link {
+    position: relative;
+    width: 100%;
+}
+
+.nav-link::after {
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(117, 117, 117);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.navigation {
+    background-color: var(--background_black);
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    min-width: 300px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+
+.text-wrapper {
+    color: #000000;
+    font-family: "Object Sans-Regular";
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--background);
+}
+.nv-container {
+    /* margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10.35%;
+    margin-right: 10.35%; */
+
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 170px;
+    padding: 30px 178px 30px 179px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.nv_wrapper{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.nv-elements {
+    /* align-items: flex-end; */
+    /* background-color: #d9d9d9; */
+    display: flex;
+    justify-content: end;
+    gap: 20%;
+    top: 68px;
+    
+}
+
+
+
+.logo {
+    border-radius: 50px;
+    width: 90px;
+    height: 110px; 
+    padding: 0;
+    margin-left: 0;
+    background-image: url('./ui/mock/logo.png');
+}
