@@ -1,0 +1,19 @@
+.expectations__wrapper {
+    width: 100%;
+    background: var(--background_black);
+    padding: 11% 12%;
+
+}
+
+.expectations__title {
+    color: var(--background);
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 160px;
+    text-align: center;
+    text-transform: lowercase;
+    z-index: 11;
+}
+
+.expectations_card {
+    margin: 0 auto;
+}

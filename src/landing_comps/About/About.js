@@ -4,11 +4,16 @@ import about_photo_1 from '../../ui/mock/about_photo_1.png';
 import sun_red from '../../ui/mock/sun_red.png';
 import about_photo_2 from '../../ui/mock/about_photo_2.png';
 
+<<<<<<< Updated upstream
 import sun from '../../ui/mock/sun.png';
+=======
+import sun from '../../ui/mock/sun_yellow.png';
+>>>>>>> Stashed changes
 
 export const About = () => {
     return (
         <div className="about">
+<<<<<<< Updated upstream
             {/* <Container className="element-about-wrapper">
                 <Container className="element-about">
                     <h1 className="text-wrapper">
@@ -23,6 +28,8 @@ export const About = () => {
                 </Container>
             </Container> */}
 
+=======
+>>>>>>> Stashed changes
             <div className="element-about-wrapper">
                 <h1 className="text-wrapper">ЧТО ТАКОЕ ПОСВЯТ?</h1>
                 <img src={about_photo_1} alt="photo" className="about_photo" />

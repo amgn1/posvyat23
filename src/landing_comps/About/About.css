@@ -31,7 +31,11 @@
 
 .text__wrapper{
     display: flex;
+<<<<<<< Updated upstream
     justify-content: end;
+=======
+    justify-content: flex-end;
+>>>>>>> Stashed changes
 }
 
 .text_2 {
@@ -60,9 +64,32 @@
     position: absolute;
     width: 45%;
     left: 45%;
+<<<<<<< Updated upstream
     top: 37%;
 }
 
+=======
+    top: 38%;
+    -webkit-animation: spin 15s linear infinite;
+    -moz-animation: spin 15s linear infinite;
+    animation: spin 15s linear infinite
+}
+
+@-webkit-keyframes spin  {
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+
+
+>>>>>>> Stashed changes
 .btn {
     background: url('../../ui/mock/btn_outline.png');
     box-sizing: border-box;
@@ -102,3 +129,8 @@
     width: 100%;
     margin: 0%;
 }
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* .box {
     background-color: transparent;
     display: flex;
@@ -155,3 +156,56 @@ img {
 img:hover {
     transform: translateZ(20px);
 }
+=======
+
+
+body {
+    background-color: var(--background);
+}
+
+.sponsors__wrapper {
+    background-color: var(--background);
+    width: 100%;
+    margin-bottom: 12%;
+}
+.marquee-infinite {
+    margin: 30px auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--background);
+    width: 100%;
+    overflow: hidden;
+    margin-top: 3%;
+    margin-bottom: 6%;
+}
+
+.marquee-infinite div {
+    display: flex;
+    width: 300%;
+    animation: marquee-infinite 10s linear infinite;
+}
+
+.marquee-infinite span {
+    width: 150%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.marquee-infinite img {
+    height: 100%;
+}
+
+.marquee-infinite:hover div {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-infinite {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+>>>>>>> Stashed changes

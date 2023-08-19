@@ -22,7 +22,11 @@
     padding: 60px 63px 60px;
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
     align-items: end;
+=======
+    align-items: flex-end;
+>>>>>>> Stashed changes
 
 }
 

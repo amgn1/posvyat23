@@ -1,0 +1,80 @@
+.ticket__wrapper{
+    background-color: var(--background);
+    max-height: 881px;
+    padding: 3% 7% 4% 5%;
+    /* position: relative; */
+    /* position: relative; */
+}
+
+.ticket_img__wrapper{
+    /* background: green; */
+    /* margin: 0 auto; */
+    position: relative;
+    width: 100%;
+    transform: rotate(-4deg);
+}
+
+.ticket_background_img {
+    width: 100%;
+    /* position: absolute; */
+}
+
+.ticket_text {
+    position: absolute;
+    top: 25%;
+    width: 40%;
+    left: 8%;
+    z-index: 1;
+
+    color: var(--background);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Object Sans-Regular;
+    font-size: 27.606px;
+    font-weight: 400;
+    line-height: 115%; /* 31.747px */
+    /* width: 30%; */
+}
+
+.ticket_btn {
+    background: url('../../ui/mock/btn_outline_white.png');
+    box-sizing: border-box;
+    width: 280px;
+    height: 90px;
+    align-items: center;
+    color: var(--background);
+    font-size: 34px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 15px 30px;
+    margin-top: 9%;
+    border: none;
+    position: absolute;
+    top: 38%;
+    left: 8%;
+}
+
+.footer_share{
+    height: 85px;
+    gap: 10px;
+    display: flex;
+    justify-content: start;
+}
+
+.share_vk {
+    background: url('../../ui/share/vk.png');
+    width: 85px;
+    height: 85px;
+
+}
+
+.share_tg {
+    background: url('../../ui/share/telegram.png');
+    width: 85px;
+    height: 85px;
+}
+/* 
+.share_tg {
+    background: url('../../ui/share/tg.png');
+}  */
+

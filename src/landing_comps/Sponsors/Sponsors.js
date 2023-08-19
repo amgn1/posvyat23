@@ -9,6 +9,7 @@ import "./Sponsors.css";
 
 export const Spnsrs = () => {
     return (
+<<<<<<< Updated upstream
         // <div className="box">
         //     <div className="element-sponsors-wrapper">
         //         <div className="element-sponsors">
@@ -59,6 +60,35 @@ export const Spnsrs = () => {
                     <div className="slide">
                         <img src={durex} alt="durex" />
                     </div>
+=======
+        <div className="sponsors__wrapper">
+            <div class="marquee-infinite">
+                <div>
+                    <span>
+                        <img src={cofix} alt="cofix" />
+                        <img src={tanuki} alt="tanuki" />
+                        <img src={william_lawsons} alt="william_lawsons" />
+                        <img src={subway} alt="subway" />
+                        <img src={durex} alt="durex" />
+                        <img src={cofix} alt="cofix" />
+                        <img src={tanuki} alt="tanuki" />
+                        <img src={william_lawsons} alt="william_lawsons" />
+                        <img src={subway} alt="subway" />
+                        <img src={durex} alt="durex" />
+                    </span>
+                    <span>
+                        <img src={cofix} alt="cofix" />
+                        <img src={tanuki} alt="tanuki" />
+                        <img src={william_lawsons} alt="william_lawsons" />
+                        <img src={subway} alt="subway" />
+                        <img src={durex} alt="durex" />
+                        <img src={cofix} alt="cofix" />
+                        <img src={tanuki} alt="tanuki" />
+                        <img src={william_lawsons} alt="william_lawsons" />
+                        <img src={subway} alt="subway" />
+                        <img src={durex} alt="durex" />
+                    </span>
+>>>>>>> Stashed changes
 
                 </div>
             </div>

@@ -1,0 +1,123 @@
+.theme__wrapper {
+    padding-bottom: 300px;
+}
+
+.theme__title {
+    color: #000;
+    margin-top: 3%;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 120.689px;
+    font-weight: 500;
+    line-height: 100%; /* 120.689px */
+    text-align: center;
+
+}
+
+.theme__cards {
+    box-sizing: border-box;
+    margin-top: 40px;
+    display: grid;
+    margin: 0 10%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 59px;
+}
+
+.theme__card {
+    position: relative;
+    height: 461px;
+    border-radius: 53px 53px 51px 51px;
+    background-image: white;
+    &.suits {
+        background-image: linear-gradient(to bottom, #F6B46D, #FDE4C3);
+    };
+
+    &.atmosphere {
+        background-image: linear-gradient(to bottom, #84B9DB, #DDE4E2);
+    };
+    
+    &.games {
+        background-image: linear-gradient(to bottom, #ADC178, #ECE9CB);
+    }
+
+}
+
+.theme__card_img {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 11;
+
+}
+
+.theme__card_title {
+    color: var(--background_black);
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 64px */
+
+    position: absolute;
+    text-align: center;
+    bottom: -100px;
+    left: 50%;
+    translate: transform(0, 50%);
+    transform: translate(-50%, 0);
+}
+
+.theme__card_descr {
+    position: absolute;
+    color: var(--background_black);
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 115%; /* 27.6px */
+    top: 570px
+}
+
+/* TODO: анимация для карточек, попросить полное солнышко */
+.white_sun {
+    /* color: white; */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+    animation-name:  sun;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition:  all .1s;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    width: 60%;
+
+}
+.right {
+    position: absolute;
+    width: 60%;
+    right: 0;
+}
+
+@keyframes sun {
+    0% {
+        transform: rotate(0);
+        transition:  all .2s;
+    }
+
+    50% {
+        transform: rotate(5deg);
+        transition:  all .2s;
+    }
+
+     100% {
+        transform: rotate(0);
+        
+     }
+}
+
+
+

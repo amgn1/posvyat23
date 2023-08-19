@@ -1,0 +1,32 @@
+.backtotop {
+    background: none;
+    background: url('../../ui/mock/up.png');
+    border: none;
+    width: 50px;
+    height: 44px;
+    /* margin-top: 8%;
+    margin-bottom: 4%; */
+
+    margin-left: 90%;
+
+    animation-name:  infiniteupdown;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition:  all .5s;
+
+}
+
+@keyframes infiniteupdown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+     100% {
+        transform: translateY(0px);
+     }
+}
