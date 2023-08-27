@@ -5,7 +5,7 @@
     z-index: -10;
     background-color: var(--background);
     position: relative;
-
+    background-image: url('../../ui/mock/noise.png');
 }
 
 .about_photo {
@@ -31,11 +31,8 @@
 
 .text__wrapper{
     display: flex;
-<<<<<<< Updated upstream
-    justify-content: end;
-=======
     justify-content: flex-end;
->>>>>>> Stashed changes
+    color: green;
 }
 
 .text_2 {
@@ -64,32 +61,26 @@
     position: absolute;
     width: 45%;
     left: 45%;
-<<<<<<< Updated upstream
-    top: 37%;
-}
-
-=======
     top: 38%;
-    -webkit-animation: spin 15s linear infinite;
-    -moz-animation: spin 15s linear infinite;
-    animation: spin 15s linear infinite
+    -webkit-animation: sunSpin 15s linear infinite;
+    -moz-animation: sunSpin 15s linear infinite;
+    animation: sunSpin 15s linear infinite
 }
 
-@-webkit-keyframes spin  {
+@-webkit-keyframes sunSpin  {
     100% {-webkit-transform: rotate(360deg);}
 }
 
-@-moz-keyframes spin {
+@-moz-keyframes sunSpin {
     100%{-webkit-transform: rotate(360deg);}
 }
 
-@keyframes spin {
+@keyframes sunSpin {
     100%{-webkit-transform: rotate(360deg);}
 }
 
 
 
->>>>>>> Stashed changes
 .btn {
     background: url('../../ui/mock/btn_outline.png');
     box-sizing: border-box;
@@ -129,8 +120,37 @@
     width: 100%;
     margin: 0%;
 }
-<<<<<<< Updated upstream
-=======
 
+@media screen and (max-width: 1600px) {
 
->>>>>>> Stashed changes
+    .about .text-wrapper {
+        color: green;
+        font-size: 106px;
+    }
+
+    .text {
+        font-size: 20px;
+        width: 510px;
+        margin-top: 6%;
+        color: green;
+    }
+
+    .about_photo {
+        top: 10%;
+    }
+    
+    .about_photo_2 {
+        top: 48%;
+    }
+
+    .sun {
+        width: 40%;
+        left: 45%;
+        top: 34%;
+    }
+
+    .btn {
+        margin-top: 7%;
+    }
+    
+}

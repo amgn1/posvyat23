@@ -1,0 +1,132 @@
+.hands-info_block {
+    width: 40%;
+    height: 800px;
+    /* background-image: url('../../ui/mock/noise.png'); */
+    z-index: 30;
+}
+
+.hands_btn {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.hands-info_block {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.hands {
+    position: absolute;
+    z-index: 1;
+
+    width: 50%;
+}
+
+.hand_left {
+    left: 0%;
+    top: -2%;
+
+    -webkit-animation: left_hand 3s linear infinite;
+    -moz-animation: left_hand 3s linear infinite;
+    animation: left_hand 3s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes left_hand  {
+    0% {
+        /* -webkit-transform-origin-x: 0px; */
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        -webkit-transform-origin-x: 120em;
+        /* -webkit-transform-origin-x: 1000px; */
+    }
+}
+
+@-moz-keyframes left_hand {
+    0% {
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        -webkit-transform-origin-x: 120em;
+    }
+}
+
+@keyframes left_hand {
+    0% {
+        /* -webkit-transform: scale(1.2); */
+        /* -webkit-transform-origin-x: 0px; */
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        -webkit-transform-origin-x: 120em;
+    }
+}
+
+.hand_right {
+    right: 0%;
+    top: 0%;
+    z-index: 2;
+
+    -webkit-animation: right_hand 3s linear infinite;
+    -moz-animation: right_hand 3s linear infinite;
+    animation: right_hand 3s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes right_hand  {
+    0% {
+        /* -webkit-transform-origin-x: 0px; */
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        -webkit-transform-origin-x: -120em;
+        /* -webkit-transform-origin-x: 1000px; */
+    }
+}
+
+@-moz-keyframes right_hand {
+    100% {
+        -webkit-transform: scale(1.2);
+        -webkit-transform-origin-x: -120em;
+    }
+}
+
+@keyframes right_hand {
+    0% {
+        /* -webkit-transform: scale(1.2); */
+        /* -webkit-transform-origin-x: 0px; */
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        -webkit-transform-origin-x: -120em;
+    }
+}
+
+.clarifications {
+    color: var(--red, #C33824);
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Kyiv Region-Regular"; 
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 80.5px */
+    text-align: center;
+}
+
+.hands-info_main {
+    color: var(--black, #1B1818);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Object Sans-Regular";
+    font-size: 41.046px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 47.203px */
+    text-align: center;
+}

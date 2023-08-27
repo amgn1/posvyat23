@@ -10,7 +10,7 @@ export const Main = () => {
                 <Container className="element-main">
                     <div className="text-wrapper">30 сентября – 1 октября</div>
                     <div className="label">
-                          ПОСВЯТ
+                          {/* ПОСВЯТ */}
                     </div>
                     <p className="p">Скорее регистрируйся, чтобы не пропустить главное событие твоего студенчества!</p>
                     <div className="btn">

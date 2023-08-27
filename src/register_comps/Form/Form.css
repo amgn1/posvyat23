@@ -1,0 +1,75 @@
+.form_component {
+    height: 122px;
+    position: relative;
+    width: 370px;
+}
+
+.form_container {
+    padding-top: 94.62px;
+    padding-left: 279px;
+    padding-right: 279px;
+    margin: 0;
+
+}
+
+/* select {
+    border-radius: 30px; 
+    background-color: transparent; 
+} */
+
+.form-frame {
+    
+    border: 3px solid;
+    border-color: #aaaaaa;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+    padding: 24px 40px;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+}
+
+.form-text-wrapper {
+    color: #878787;
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+    }
+
+.form_label {
+    border: 0px none;
+    height: 32px;
+    width: 145px;
+    color: rgba(246, 180, 96, 1);
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 32px;
+    
+    top: 0;
+    white-space: nowrap;
+}
+
+.form-btn {
+    background: url('../../ui/mock/btn_outline.png');
+    box-sizing: border-box;
+    align-self: center;
+    background-color: transparent;
+    font-size: 34px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.form-option {
+    background-color: transparent;
+}

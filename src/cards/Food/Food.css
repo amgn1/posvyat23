@@ -18,13 +18,9 @@
     background: #FFF6E6;
     position: relative;
     box-sizing: border-box;
-<<<<<<< Updated upstream
-=======
     margin: 0 auto;
->>>>>>> Stashed changes
 
     padding: 73px 59px 60px;
-
 }
 
 .card_title_food {
@@ -56,4 +52,11 @@
     position: absolute;
     left: 57%;
     bottom: -10%;
+}
+
+@media screen and (max-width: 1600px) {
+    .card_food {
+        scale: 0.75;
+    
+    }
 }

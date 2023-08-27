@@ -1,0 +1,17 @@
+.label {
+    border: 0px none;
+    padding: 0;
+}
+
+.label .text-wrapper {
+    color: rgb(195, 56, 36, 1);
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 223.2px;
+    font-weight: 400;
+    width: 100%;
+    padding: 0;
+    /* letter-spacing: 0; */
+    line-height: 223.2px;
+    white-space: nowrap;
+    border: 0px none;
+}

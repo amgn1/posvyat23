@@ -1,10 +1,14 @@
 .theme__wrapper {
     padding-bottom: 300px;
+    background-image: url('../../ui/mock/noise.png');
+    padding: 6% 0%;
+    height: 1100px;
 }
 
 .theme__title {
     color: #000;
-    margin-top: 3%;
+    margin: 0;
+    margin-bottom: 3%;
     font-family: "Kyiv Region-Regular", Helvetica;
     font-size: 120.689px;
     font-weight: 500;
@@ -27,6 +31,7 @@
     height: 461px;
     border-radius: 53px 53px 51px 51px;
     background-image: white;
+    overflow: hidden;
     &.suits {
         background-image: linear-gradient(to bottom, #F6B46D, #FDE4C3);
     };
@@ -57,22 +62,29 @@
     font-weight: 500;
     line-height: 100%; /* 64px */
 
-    position: absolute;
-    text-align: center;
-    bottom: -100px;
-    left: 50%;
-    translate: transform(0, 50%);
-    transform: translate(-50%, 0);
+    margin-top: 4%;
 }
 
 .theme__card_descr {
-    position: absolute;
+    /* position: absolute; */
     color: var(--background_black);
     font-family: "Object Sans-Regular", Helvetica;
     font-size: 24px;
     font-weight: 400;
     line-height: 115%; /* 27.6px */
-    top: 570px
+    /* top: 570px; */
+    /* z-index: 1000; */
+    margin-top: 4%;
+
+}
+
+.theme__cards_descr {
+    box-sizing: border-box;
+    margin-top: 40px;
+    display: grid;
+    margin: 0 10%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 59px;
 }
 
 /* TODO: анимация для карточек, попросить полное солнышко */
@@ -90,16 +102,99 @@
     transition:  all .1s;
 }
 
+/* left animation */
+
 .left {
     position: absolute;
-    left: 0;
+    left: -5%;
+    top: 2%;
     width: 60%;
+    -webkit-animation: left 15s linear infinite;
+    -moz-animation: left 15s linear infinite;
+    animation: left 15s linear infinite
 
 }
+
+@-webkit-keyframes left  {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes left {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes left {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
 .right {
     position: absolute;
     width: 60%;
     right: 0;
+    -webkit-animation: right 15s linear infinite;
+    -moz-animation: right 15s linear infinite;
+    animation: right 15s linear infinite
+}
+
+
+@-webkit-keyframes right  {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes right {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes right {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
 }
 
 @keyframes sun {
@@ -117,6 +212,65 @@
         transform: rotate(0);
         
      }
+}
+
+.white_sun {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: -40%;
+    -webkit-animation: sunSpin 15s linear infinite;
+    -moz-animation: sunSpin 15s linear infinite;
+    animation: sunSpin 15s linear infinite
+}
+
+@-webkit-keyframes sunSpin  {
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes sunSpin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+@keyframes sunSpin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+
+    .theme__wrapper {
+        height: 800px;
+    }
+
+    .theme__title {
+        font-size: 90px;
+    }
+
+    .theme__cards {
+        gap: 26px;
+    }
+    .theme__card {
+        height: 400px;
+    }
+
+    .theme__card_title {
+        font-size: 45px;
+    }
+
+    .theme__card_descr {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .theme__card {
+        height: 280px;
+    }
 }
 
 

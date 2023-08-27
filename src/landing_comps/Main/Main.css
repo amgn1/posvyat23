@@ -1,7 +1,9 @@
 @import '../../ui/styles/colors.css';
 
+
 .main {
-    background-color: var(--background_black);
+    background-color: #1b1818;
+    /* background-image: url('../../ui/mock/noise.png'); */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,8 +26,6 @@
     display: inline-flex;
     flex-direction: column;
     padding: 0;
-    
-    
 }
 
 .main .text-wrapper {
@@ -42,37 +42,74 @@
 }
 
 .main .label {
-    border: 0px none;
+    /* border: 0px none;
     height: calc(61px + (333.5 - 61) * ((100vw - 320px) / (1728 - 320)));
     width: 100%;
     color: var(--red_main);
     font-family: "Kyiv Region-Regular";
-    font-size: calc(61px + (333.5 - 61) * ((100vw - 320px) / (1728 - 320)));
+    font-size: 318px;
     font-weight: 400;
-    letter-spacing: 0;
-    /* line-height: calc(61px + (333.5 - 61) * ((100vw - 320px) / (1728 - 320))); */
     position: relative;
     width: 100%;
     padding: 0%;
-    margin: 0%;
-    margin-top: 6%;
-    }
-
-.main .label .h-1 {
-    
+    text-align: center;
+    margin-top: 6%; */
+    text-align: center;
+    font-weight: 400;
     color: var(--red_main);
+    margin-top: 6%; 
+    font-size: 318px;
     font-family: "Kyiv Region-Regular";
-    font-size: calc(61px + (333.5 - 61) * ((100vw - 320px) / (1728 - 320)));
-    font-weight: 400;
-    letter-spacing: 0;
-    /* line-height: calc(61px + (333.5 - 61) * ((100vw - 320px) / (1728 - 320))); */
-    position: relative;
-    width: 100%;
-    padding: 0%;
-    margin: 0%;
-    margin-top: 6%;
+    line-height: 100%;
+    background-image: url('../../ui/mock/title/title_sun.png');
+    width: 1350px;
+    height: 230px;
+    animation-name:  title;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    /* transition: 1s all; */
 }
 
+@keyframes title {
+    0% {
+        background-image: url('../../ui/mock/title/title_sun.png');
+    }
+
+    12% {
+        background-image: url('../../ui/mock/title/title_black.png');
+    }
+
+    24% {
+        background-image: url('../../ui/mock/title/title_man.png');
+    }
+
+    36% {
+
+        background-image: url('../../ui/mock/title/title_black.png');
+    }
+
+    48% {
+        background-image: url('../../ui/mock/title/title_cross.png');
+    }
+
+    60% {
+        background-image: url('../../ui/mock/title/title_black.png');
+    }
+
+    72% {
+        background-image: url('../../ui/mock/title/title_people.png');
+     }
+
+    84% {
+        background-image: url('../../ui/mock/title/title_black.png');
+    }
+
+    96% {
+        background-image: url('../../ui/mock/title/title_sun.png');
+    }
+
+}
 .main .p {
     color: var(--background);
     font-family: "Raleway-Medium";
@@ -98,8 +135,9 @@
     display: inline-flex;
     flex: 0 0 auto;
     justify-content: center;
-    padding: 15px 30px;
+    padding: 15px 30px; 
     position: relative;
+    margin-top: 8%;
 }
 
 .main .div {
@@ -124,8 +162,6 @@
     height: 38px;
     margin-top: 8%;
     margin-bottom: 4%;
-<<<<<<< Updated upstream
-=======
 
     animation-name:  infiniteupdown;
     animation-duration: 4s;
@@ -146,5 +182,44 @@
      100% {
         transform: translateY(0px);
      }
->>>>>>> Stashed changes
+}
+
+/* @import './Main1280.css'; */
+
+@media screen and (max-width: 1600px) {
+
+    .main .label {
+        font-size: 252px;
+        color: green;
+    }
+
+    .main .text-wrapper {
+        font-size: 35px;
+        color: green;
+    }
+
+    .main .p {
+        font-size: 20px;
+        color: green;
+        margin-top: 0%;
+    }
+
+    .main .btn {
+        margin-top: 6%;
+        /* font-size: 26px; */
+    }
+
+    .main .next {
+        margin-top: 6%;
+        margin-bottom: 2%;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    .main .label {
+        font-size: 170px;
+        color: white;
+    }
 }

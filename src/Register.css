@@ -1,0 +1,16 @@
+.main-container {
+    padding: 0;
+    
+    /* box-shadow: 1px 1px 1px 2px #1b1818; */
+    border: 0px none;
+    background-image: url(./ui/mock/noise.png);
+    background-color: #1b1818;
+}
+
+.label-wrapper {
+    padding-top: 73.38px;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0px none;
+    
+}

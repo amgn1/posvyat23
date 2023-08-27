@@ -1,7 +1,8 @@
 .expectations__wrapper {
     width: 100%;
-    background: var(--background_black);
+    background-color: var(--background_black);
     padding: 11% 12%;
+    background-image: url('../../ui/mock/noise.png');
 
 }
 
@@ -16,4 +17,108 @@
 
 .expectations_card {
     margin: 0 auto;
+}
+
+.slider {
+    position: relative;
+    /* width: 140%; */
+    height: 650px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.item {
+    position: absolute;
+    /* width: 50%; */
+    /* background-color: red; */
+    left: 13%;
+    transform: translate(50%, 0);
+    transition: 0.5s all;
+}
+
+#next, #prev {
+    position: absolute;
+    top:40%;
+    background: none;
+    border: none;
+    /* color: var(--red_main); */
+
+    width: 40px;
+    height: 40px;
+    left: 50px;
+    margin: 30px;
+}   
+
+#next {
+    background: url('../../ui/mock/slider_next.png');
+    left: unset;
+    right: 5%;
+    
+    animation-name:  next;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition:  all .5s;
+    /* transform: rotate(90deg); */
+}
+
+/* @keyframes next {
+    0% {
+        transform: translateX(0px);
+        
+    }
+
+    50% {
+        transform: translateX(-40px);
+    }
+
+     100% {
+        transform: translateX(0px);
+     }
+} */
+
+#prev {
+
+    background: url('../../ui/mock/slider_prev.png');
+    right: 50px;
+    
+    animation-name:  next;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition:  all .5s;
+}
+
+@keyframes prev {
+    0% {
+        transform: translateX(40px);
+        
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+     100% {
+        transform: translateX(40px);
+     }
+}
+
+@media screen and (max-width: 1600px) {
+
+    .main .label {
+        font-size: 170px;
+        color: white;
+    }
+    .expectations__title {
+        font-size: 136px;
+    }
+
+    .expectations__wrapper {
+        width: 100%;
+        background-color: var(--background_black);
+        padding: 8% 9%;
+    }
+
 }
