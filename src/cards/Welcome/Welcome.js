@@ -2,6 +2,8 @@ import React from 'react';
 import welcome from '../../ui/cards/welcome.png';
 import "./Welcome.css";
 
+
+
 function Welcome() {
   return (
     <div className='card'>

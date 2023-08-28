@@ -36,6 +36,7 @@ export const LandingPage = () => {
             {/* Карточки для секции */}
             {/* <Food/>
             <MainProgram/> */}
+            
 
                         <Spnsrs className = "spnsrs"/>
                         <Theme/>

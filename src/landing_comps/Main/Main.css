@@ -1,5 +1,8 @@
 @import '../../ui/styles/colors.css';
 
+.white {
+    color: white;
+}
 
 .main {
     background-color: #1b1818;
