@@ -28,30 +28,19 @@ export const LandingPage = () => {
     return (
         <div className="">
             <Main className = 'main'/>
-            <About/>
+            <About className = "about"/>
             <Expectations/>
-{/* TODO: Вынести отдельно карточки */}
-            {/* <Adv/> */}
-
-            {/* Карточки для секции */}
-            {/* <Food/>
-            <MainProgram/> */}
             
 
                         <Spnsrs className = "spnsrs"/>
                         <Theme/>
                         <Hands/>
-                        <HandsDark/>
                         <Memories/>
                         <MemoriesRow2/>
                         <MemoriesRow3/>
                         <Ticket/>
                         <BackToTopBtn/>
-
-
-            {/* <Sponsors/> */}
         </div>
-
     );
 };
 

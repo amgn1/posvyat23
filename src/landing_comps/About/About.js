@@ -6,6 +6,8 @@ import about_photo_2 from '../../ui/mock/about_photo_2.png';
 
 import sun from '../../ui/mock/sun_yellow.png';
 
+
+
 export const About = () => {
     return (
         // class="wow slideInLeft white" data-wow-duration="2s" data-wow-delay="5s"
@@ -21,14 +23,16 @@ export const About = () => {
                 <img src={about_photo_2} alt="photo" className="about_photo_2" />
 
                 <div className="text__wrapper text_2 wow fadeIn" data-wow-duration="3s">
-                    <p className="text">B Telegram-канале Посвята можно посмотреть на подготовку общины к мероприятию, а вся важная информация собрана в группе VK. Пропустить Жатву — значит упустить самое необычное и яркое событие твоей юности. 
+                    <p className="text t_2 ">B Telegram-канале Посвята можно посмотреть на подготовку общины к мероприятию, а вся важная информация собрана в группе VK. Пропустить Жатву — значит упустить самое необычное и яркое событие твоей юности. <br /> <br />
 
 Стань участником славянского праздника и эффектно вступи в студенческую жизнь!</p>
                 </div>
 
-                <div className="btn wow fadeIn"  data-wow-duration="2s">
-                    регистрация
-                </div>
+                <button className="btn__registration wow fadeIn"  data-wow-duration="2s">
+                    <span className="btn_label">
+                        регистрация
+                    </span>
+                </button>
 
 
             </div>

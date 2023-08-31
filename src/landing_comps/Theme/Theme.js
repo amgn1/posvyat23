@@ -9,7 +9,7 @@ import left_hand from '../../ui/mock/hands/left_hand.png';
 import right_hand from '../../ui/mock/hands/right_hand.png';
 
 import atmosphere from '../../ui/mock/Theme/atmosphere.png';
-import white_sun from '../../ui/mock/sun.png';
+import white_sun from '../../ui/mock/sun_white.png';
 // import white_sun from '../../ui/mock/sun_red.png';
 import "./Theme.css";
 
@@ -52,7 +52,7 @@ function Theme() {
 
             </div>
             <div className="theme__cards_descr">
-                <div className="">
+                <div className="theme__card">
                     <h3 className="theme__card_title">Атмосфера</h3>
                     <div className="theme__card_descr">Таинственные узы протянутся 
                                                         между всеми участниками 

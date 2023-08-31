@@ -34,7 +34,7 @@ function Expectations() {
             stt++;
             items[i] = items[i]({
                 transform: `translateX(${830*stt}px) rotateY(-10deg)`,
-                scale: `${1 - 0.2*stt}`,
+                scale: `${1 - 0.4*stt}`,
                 zIndex: 2 - stt,
                 filter: "blur(5px)",
                 opacity: stt > 1 ? 0 : 0.4
@@ -45,7 +45,7 @@ function Expectations() {
             stt++;
             items[i] = items[i]({
                 transform: `translateX(${-830*stt}px) rotateY(10deg)`,
-                scale: `${1 - 0.2*stt}`,
+                scale: `${1 - 0.4*stt}`,
                 zIndex: 2 - stt,
                 filter: "blur(5px)",
                 opacity: stt > 1 ? 0 : 0.4
@@ -63,7 +63,6 @@ function Expectations() {
             <h2 className  ="expectations__title wow fadeIn" data-wow-duration="3s">ЧТО Тебя ждет?</h2>
             <div className="slider wow" data-wow-duration="3s">
                 {items}
-
 
                 {active - 1 >= 0 && <button className='exp_btn  prev_btn' onClick= {() => setActive((old) => old - 1)}></button>}
                 {active + 1 < items.length && <button className = 'exp_btn next_btn'onClick= {() => setActive((old) => old + 1)}></button>}

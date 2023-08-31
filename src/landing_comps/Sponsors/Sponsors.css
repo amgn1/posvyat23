@@ -1,15 +1,17 @@
 
 
 body {
-    background-color: var(--background);
+    /* background-color: var(--background); */
     /* background-image: url('../../ui/mock/noise.png'); */
 }
 
 .sponsors__wrapper {
-    background-color: var(--background);
+    /* background-color: var(--background); */
+    /* background-color: red; */
     width: 100%;
     margin-bottom: 12%;
     background-image: url('../../ui/mock/noise.png');
+    border-radius: 40px 40px 0 0;
     /* overflow: hidden; */
 }
 .marquee-infinite {

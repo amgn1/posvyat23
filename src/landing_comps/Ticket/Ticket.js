@@ -5,6 +5,8 @@ import ticket_part2 from '../../ui/ticket/ticket_part2.png';
 import dash_line from '../../ui/ticket/dash-line.png';
 import people from '../../ui/ticket/people.png';
 
+import ticket_mini from '../../ui/ticket/ticket_mini.png';
+
 import './Ticket.css';
 
 // настройки
@@ -58,18 +60,9 @@ function Ticket() {
       });
 
     return (
-        <div className="ticket__wrapper">
-            {/* <div className="ticket_img__wrapper">
-                <img src={ticket} alt="ticket" className='ticket_background_img'/>
-                <img src={dash_line} alt=""  className='ticket_dashline'/>
-                <img src={ticket_part2} alt="" className='ticket_background_img2'/>
-            </div> */}
-
-            .
+        <div className="ticket__wrapper wow fadeIn" data-wow-duration="3s">
 
             <div className="ticket_img__wrapper">
-                
-                {/* <div className="test"></div> */}
                 <img src={ticket_part1} alt="ticket_part1" className='ticket_background_img1'/>
                 <img src={ticket_part2} alt="ticket_part2" className='ticket_background_img2'/>
                 <img src={dash_line} alt="" className='dash_line'/>
@@ -78,8 +71,30 @@ function Ticket() {
                 <br /> <br />
                 Смена волны продаж осуществляется по времени.</p>
 
-                <button className="ticket_btn" >регистрация</button>
+                <button className="ticket_btn" >
+                    <span>регистрация</span>
+                </button>
             </div>
+
+            <div className="ticket-mini">
+                <img src={ticket_mini} alt="ticket-mini__img" />
+                <p className='ticket-mini__text'>Билеты на Посвят продаются в несколько волн — с новой волной цена увеличивается.
+                <br /> <br />
+                Смена волны продаж осуществляется по времени.</p>
+            </div>
+
+
+            <div className="footer_red">
+                <div className='footer__icon_vk'>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></a>
+                </div>
+
+                <div className='footer__icon_tg'>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" ></a>
+                </div>
+
+            </div>
+
 
             <div className="footer_share">
                 <div className='share_vk'>

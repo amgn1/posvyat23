@@ -1,7 +1,7 @@
 
 body {
-    background-color: var(--background);
-    background-image: url('../../../ui/mock/noise.png');
+    /* background-color: var(--background);
+    background-image: url('../../../ui/mock/noise.png'); */
 
 }
 
@@ -9,7 +9,7 @@ body {
     background-color: var(--background);
     width: 100%;
     /* margin-bottom: 12%; */
-    height: 250px;
+    height: 200px;
     background-image: url('../../../ui/mock/noise.png');
 }
 .row-1__marquee-infinite {
@@ -26,19 +26,20 @@ body {
 
 .row-1__marquee-infinite div {
     display: flex;
-    width: 300%;
-    animation: marquee-infinite 10s linear infinite;
+    width: 200%;
+    /* animation: marquee-infinite 10s linear infinite; */
 }
 
 .row-1__marquee-infinite span {
-    width: 150%;
+    /* width: 70%; */
     display: flex;
     justify-content: space-around;
+    gap: 5px;
 }
 
 .row-1__marquee-infinite img {
     /* width: 20%; */
-    height: 100%;
+    height: 70%;
 }
 
 .row-1__marquee-infinite:hover div {
@@ -67,7 +68,7 @@ body {
     .row-1__marquee-infinite div {
         display: flex;
         width: 200%;
-        animation: marquee-infinite 10s linear infinite;
+        /* animation: marquee-infinite 10s linear infinite; */
     }
 
     .row-1__marquee-infinite span {

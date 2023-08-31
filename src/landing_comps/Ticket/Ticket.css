@@ -41,7 +41,7 @@
     animation: spin 1s linear infinite;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    /* animation-delay: 5s; */
+    animation-delay: 10s;
     /* position: absolute; */
 }
 
@@ -127,7 +127,7 @@
 }
 
 .ticket_btn {
-    background: url('../../ui/mock/btn_outline_white.png');
+    background: url('../../ui/mock/btn_outline_white_rotate.png');
     box-sizing: border-box;
     width: 280px;
     height: 90px;
@@ -154,16 +154,102 @@
 }
 
 .share_vk {
-    background: url('../../ui/share/vk.png');
+    background: url('../../ui/share/vk_red.png');
     width: 85px;
     height: 85px;
-
 }
 
 .share_tg {
-    background: url('../../ui/share/telegram.png');
+    background: url('../../ui/share/telegram_red.png');
     width: 85px;
     height: 85px;
+}
+
+.ticket-mini {
+    width: 620px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+
+.ticket-mini__img {
+    width: 100%;
+}
+
+.ticket-mini__text {
+    color: var(--background);
+    font-family: Object Sans-Regular;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 115%; /* 32.93px */
+    z-index: 1;
+    position: absolute;
+    /* padding: 50px; */
+    width: 75%;
+    top: 56%;
+    left: 15%;
+
+}
+
+.footer_red {
+    box-sizing:border-box;
+    display: flex;
+    background-color:#C33824;
+    width: 100%;
+    height: 138px;
+    padding: 40px;
+    display: none;
+}
+
+.footer__icon_vk {
+    background: url('../../ui/share/vk_yellow.png');
+    width: 64px;
+    height: 64px;
+}
+
+.footer__icon_tg {
+    background: url('../../ui/share/telegram_yellow.png');
+    width: 64px;
+    height: 64px;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    .ticket_text {
+        font-size: 24px;
+        /* width: 30%; */
+    }
+    
+    .ticket_btn {
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ticket_text {
+        font-size: 22px;
+        /* width: 30%; */
+    }
+
+    .ticket-mini {
+        display: flex;
+    }
+    .ticket_img__wrapper{
+        display: none;
+    }
+
+    .ticket__wrapper{
+        padding: 3% 0% 4% 0%;
+    }
+
+    .footer_red {
+        display: flex;
+    }
+
+    .footer_share{
+        display: none;
+    }
 }
 /* 
 .share_tg {

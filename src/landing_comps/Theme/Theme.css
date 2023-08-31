@@ -32,6 +32,7 @@
     border-radius: 53px 53px 51px 51px;
     background-image: white;
     overflow: hidden;
+    transition: 0.5s all;
     &.suits {
         background-image: linear-gradient(to bottom, #F6B46D, #FDE4C3);
     };
@@ -217,11 +218,12 @@
 .white_sun {
     position: absolute;
     width: 100%;
+    scale: 1.2;
     left: 0%;
-    top: -40%;
-    -webkit-animation: sunSpin 15s linear infinite;
-    -moz-animation: sunSpin 15s linear infinite;
-    animation: sunSpin 15s linear infinite
+    top: -50%;
+    -webkit-animation: sunSpin 30s linear infinite;
+    -moz-animation: sunSpin 30s linear infinite;
+    animation: sunSpin 30s linear infinite
 }
 
 @-webkit-keyframes sunSpin  {
@@ -234,6 +236,10 @@
 
 @keyframes sunSpin {
     100%{-webkit-transform: rotate(360deg);}
+}
+
+.theme__card:hover {
+    scale: 1.05;
 }
 
 
@@ -268,9 +274,45 @@
 }
 
 @media screen and (max-width: 1280px) {
+    .theme__title {
+        font-size: 80px;
+    }
+
+    .theme_cards {
+        margin: 0 6%;
+    }
+
+    .theme__card {
+        height: 320px;
+    }
+    .white_sun {
+        top: -40%;
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+    .theme__title {
+        font-size: 70px;
+    }
+    .theme__cards {
+        margin: 0 4%;
+    }
+    .theme__cards_descr {
+        margin: 0 4%;
+        font-size: 16px;
+    }
+
     .theme__card {
         height: 280px;
     }
+    .white_sun {
+        top: -40%;
+    }
+    .theme__card_title {
+        font-size: 38px;
+    }
+    
 }
 
 
