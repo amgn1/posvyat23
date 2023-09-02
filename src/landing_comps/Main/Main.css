@@ -6,7 +6,7 @@
 
 .main {
     background-color: #1b1818;
-    /* background-image: url('../../ui/mock/noise.png'); */
+    /*  */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -158,6 +158,15 @@
     margin-top: 10%;
     color: var(--background);
     margin-right: 0;
+    transition: 0.5s all;
+
+}
+
+.btn__registration_white:hover {
+    scale: 1.1;
+    color: var(--background);  
+    transition: 0.5s all;
+    
 }
 
 .btn_label {
@@ -166,7 +175,14 @@
     align-items:center;
     text-align: center;
     line-height: 32px;
-    
+    text-decoration: none;
+    color: var(--background_black);  
+}
+
+.btn_label:hover {
+    /* scale: 1.1; */
+    color: var(--background);  
+    transition: 0.5s all;
 }
 
 .main .div {

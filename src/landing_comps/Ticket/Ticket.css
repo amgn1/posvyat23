@@ -20,7 +20,7 @@
     background-color: var(--background);
     max-height: 881px;
     padding: 3% 7% 4% 5%;
-    background-image: url('../../ui/mock/noise.png');
+    
     /* position: relative; */
     /* position: relative; */
 }
@@ -126,6 +126,8 @@
     left: 48%;
 }
 
+
+
 .ticket_btn {
     background: url('../../ui/mock/btn_outline_white_rotate.png');
     box-sizing: border-box;
@@ -143,6 +145,57 @@
     position: absolute;
     top: 38%;
     left: 5%;
+    transition: 0.5s all;
+    z-index: 100;
+}
+.ticket_btn:hover {
+    scale: 1.1;
+}
+
+.ticket_btn-label {
+    text-decoration: none;
+    color: var(--background);
+}
+
+.ticket_btn-label:hover {
+    text-decoration: none;
+    color: var(--background);
+}
+
+.ticket-mini_btn {
+    background: url('../../ui/mock/btn_outlined_black-fill.png');
+    box-sizing: border-box;
+    width: 322px;
+    height: 85px;
+    align-items: center;
+    color: var(--background);
+    font-size: 34px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 15px 30px;
+    margin-top: 9%;
+    border: none;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+    transition: 0.5s all;
+    z-index: 100;
+}
+.ticket-mini_btn:hover {
+    scale: 1.1;
+}
+
+.ticket-mini_btn-label {
+    text-decoration: none;
+    color: var(--background);
+}
+
+.ticket-mini_btn-label:hover {
+    text-decoration: none;
+    color: var(--background);
 }
 
 .footer_share{
@@ -226,7 +279,7 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 960px) {
     .ticket_text {
         font-size: 22px;
         /* width: 30%; */
@@ -249,6 +302,49 @@
 
     .footer_share{
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .ticket__wrapper {
+        padding: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 500px;
+        /* width: 500px; */
+    } 
+
+    .ticket-mini {
+        scale: 0.6  ;
+        margin-bottom: -170px;
+        /* width: 500px; */
+    }
+
+    ticket-mini__img {
+            
+    }
+
+    .ticket_btn {
+        position: absolute;
+        scale: 1;
+        top: 0%;
+        left: 50%;
+        transform: translateX(0, 50%);
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    body {
+        position: relative;
+    }
+
+    .ticket-mini {
+        position: absolute;
+        scale: 0.4;
+        top: 0%;
     }
 }
 /* 

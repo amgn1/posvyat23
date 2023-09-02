@@ -1,6 +1,6 @@
 .theme__wrapper {
     padding-bottom: 300px;
-    background-image: url('../../ui/mock/noise.png');
+    
     padding: 6% 0%;
     height: 1100px;
 }
@@ -249,7 +249,7 @@
 @media screen and (max-width: 1600px) {
 
     .theme__wrapper {
-        height: 800px;
+        height: 900px;
     }
 
     .theme__title {

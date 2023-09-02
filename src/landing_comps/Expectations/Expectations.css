@@ -2,7 +2,7 @@
     width: 100%;
     background-color: var(--background_black);
     padding: 11% 12%;
-    background-image: url('../../ui/mock/noise.png');
+    
     overflow: hidden;
     border-radius: 40px 40px 0 0;
 

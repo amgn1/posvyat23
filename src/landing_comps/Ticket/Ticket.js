@@ -5,7 +5,9 @@ import ticket_part2 from '../../ui/ticket/ticket_part2.png';
 import dash_line from '../../ui/ticket/dash-line.png';
 import people from '../../ui/ticket/people.png';
 
+
 import ticket_mini from '../../ui/ticket/ticket_mini.png';
+import btn_reg_mini from '../../ui/mock/btn_outlined_black-fill.png';
 
 import './Ticket.css';
 
@@ -72,7 +74,7 @@ function Ticket() {
                 Смена волны продаж осуществляется по времени.</p>
 
                 <button className="ticket_btn" >
-                    <span>регистрация</span>
+                    <a href="/register" className="ticket_btn-label">Расселение</a>
                 </button>
             </div>
 
@@ -81,6 +83,10 @@ function Ticket() {
                 <p className='ticket-mini__text'>Билеты на Посвят продаются в несколько волн — с новой волной цена увеличивается.
                 <br /> <br />
                 Смена волны продаж осуществляется по времени.</p>
+                <button className="ticket-mini_btn" >
+                    <a href="/register" className="ticket_btn-label">Расселение</a>
+                </button>
+
             </div>
 
 

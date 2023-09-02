@@ -41,9 +41,7 @@ export const Main = () => {
 
 
                     <button className="btn__registration_white wow fadeIn"  data-wow-duration="2s">
-                        <span className="btn_label">
-                            регистрация
-                        </span>
+                        <a href="/register" className="btn_label">Регистрация</a>
                     </button>
 
                     <button className="next"></button>
