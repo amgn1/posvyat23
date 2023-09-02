@@ -1,13 +1,13 @@
 .form_component {
-    height: 122px;
-    position: relative;
-    width: 370px;
+    /* padding-bottom: calc(20px + (50 - 20) * ((100vw - 390px) / (1728 - 390))); */
+    /* padding-left: 50px;
+    padding-right: 50px; */
 }
 
 .form_container {
-    padding-top: 94.62px;
-    padding-left: 279px;
-    padding-right: 279px;
+    padding-top: 4.839898vh;
+    padding-left: 16.145833vw;
+    padding-right: 16.145833vw;
     margin: 0;
 
 }
@@ -30,46 +30,143 @@
     background-color: transparent;
 }
 
+.form-frame:focus {
+    border-color: rgba(246, 180, 96, 1);
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+
 .form-text-wrapper {
     color: #878787;
     font-family: "Object Sans-Regular", Helvetica;
-    font-size: 24px;
+    font-size: calc(16px + (24 - 16) * ((100vw - 390px) / (1728 - 390)));
     font-weight: 400;
-    left: 0;
     letter-spacing: 0;
-    line-height: 24px;
+    line-height: calc(16px + (24 - 16) * ((100vw - 390px) / (1728 - 390)));
     white-space: nowrap;
     }
 
 .form_label {
     border: 0px none;
-    height: 32px;
-    width: 145px;
+    
+    
     color: rgba(246, 180, 96, 1);
     font-family: "Object Sans-Regular", Helvetica;
-    font-size: 32px;
+    
+    font-size: 24px;
+
     font-weight: 400;
     left: 0;
     letter-spacing: 0;
-    line-height: 32px;
-    
+    line-height: 100%;
+    width: 100%;
     top: 0;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 
-.form-btn {
+  @media screen and (min-width: 600px) {
+    .form_label {
+      font-size: calc(24px + 16 * ((100vw - 600px) / 600));
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .form_label {
+      font-size: 32px;
+    }
+  }
+
+.form_btn__registration_white {
+    border: none;
     background: url('../../ui/mock/btn_outline.png');
     box-sizing: border-box;
-    align-self: center;
-    background-color: transparent;
+    width: 300px;
+    align-items: center;
     font-size: 34px;
-    display: inline-flex;
-    flex: 0 0 auto;
+    
     justify-content: center;
-    padding: 15px 30px;
-    position: relative;
+    padding: 20px 30px 28px;
+    
+    color: var(--background);
+    margin-right: 0;
+}
+
+.btn_label {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    line-height: 32px;
+    overflow: hidden;
+    
 }
 
 .form-option {
     background-color: transparent;
+}
+
+.modal-content {
+    border-radius: 27.64px;
+    display: flex;
+    border: 6px solid rgba(195, 56, 36, 1);;
+    background-color: #1b1818;
+}
+
+.form_btn__registration_white_popup {
+    border: none;
+    background: url('../../ui/mock/white_outline.png'); 
+    box-sizing: border-box;
+    width: 298px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 298px 59px;
+    
+    align-items: center;
+    font-size: 21.8px;
+    
+    justify-content: center;
+    padding: 20px 30px 34px;
+    
+    color: var(--background);
+    margin-right: 0;
+}
+
+.form_btn__registration_white_popup:hover {
+    background: url('../../ui/mock/bezh_outline.png');
+    
+}
+
+@media screen and (min-width: 600px) {
+    .form_btn__registration_white_popup {
+      font-size: calc(21.8px + 9 * ((100vw - 600px) / 600));
+      width: calc(298px + 146 * ((100vw - 600px) / 600));
+      background-size: calc(298px + 146 * ((100vw - 600px) / 600));
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .form_btn__registration_white_popup {
+        font-size: 30.8px;
+        width: 444px;
+        background-size: auto;
+    }
+  }
+
+.sun1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px; 
+    height: 277px;
+}
+
+.sun2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 192px; 
+    height: 229px;
 }

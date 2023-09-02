@@ -4,8 +4,10 @@ import { Container } from "react-bootstrap";
 
 export const Label = () => {
     return (
-        <Container className="label">
-            <Container className="text-wrapper">Регистрация</Container>
+        <Container className="label pt-5">
+            <Container className="text-wrapper" fluid>
+                Регистрация
+            </Container> 
         </Container>
     );
 };

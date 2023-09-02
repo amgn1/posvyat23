@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "./Form.css";
 import { Modal, Button, Container } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import classnames from 'classnames';
+import { Popup_inner } from '../Popup/Popup';
+import sun1 from '../../ui/mock/sun (1).png'
+import sun2 from '../../ui/mock/sun (2).png'
+import WOW from 'wowjs';
 
 export const Form_aggr = () => {
     const [formData, setFormData] = useState({});
     const [errors, setErrors] = useState({});
     const [showModal, setShowModal] = useState(false);
-
+    
     const handleInputChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
+
+    document.addEventListener("DOMContentLoaded", function(){
+        new WOW.WOW({
+            live: false
+        }).init();
+    })
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
@@ -30,6 +40,8 @@ export const Form_aggr = () => {
                 setErrors({});
                 setShowModal(true);
             } else if (xhr.status === 400) {
+                
+                    
                 // Получаем ответ с ошибками от сервера
                 const response = JSON.parse(xhr.responseText);
                 const errorMessages = {};
@@ -119,12 +131,13 @@ export const Form_aggr = () => {
     };
 
     return (
-        <Container className="form_container" fluid>
-            <Form onSubmit={handleSubmit}>
-                <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridSurname">
+        <Container className="mt-auto pt-5">
+            <Form onSubmit={handleSubmit} className='mt-auto pt-auto' >
+                <Row className="mb-3 gy-3">
+                    <Form.Group as={Col} lg={4} xs={12} controlId="formGridSurname" className='form_component'>
                         <Form.Label className="form_label">Фамилия</Form.Label>
                         <Form.Control 
+                            
                             name='surname'
                             id='surname'
                             type='text'
@@ -136,9 +149,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('surname')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridName">
+                    <Form.Group as={Col} lg={4} xs={12} controlId="formGridName" className='form_component'>
                         <Form.Label className="form_label">Имя</Form.Label>
                         <Form.Control 
+                            
                             name='name'
                             id='name'
                             type='text' 
@@ -150,9 +164,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('name')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridPatronymic">
+                    <Form.Group as={Col} lg={4} xs={12} controlId="formGridPatronymic" className='form_component'>
                         <Form.Label className="form_label">Отчество (при наличии)</Form.Label>
                         <Form.Control 
+                            
                             name='patronymic'
                             id='patronymic'
                             type='text'
@@ -165,10 +180,11 @@ export const Form_aggr = () => {
                     </Form.Group>
                 </Row>
 
-                <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridEmail">
+                <Row className="mb-3 gy-3">
+                    <Form.Group as={Col} lg={6} xs={12} controlId="formGridEmail" className='form_component'>
                         <Form.Label className="form_label">Почта</Form.Label>
                         <Form.Control 
+                            
                             type="email" 
                             name='email'
                             id='email'
@@ -180,9 +196,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('email')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridPhone">
+                    <Form.Group as={Col} lg={3} xs={12} controlId="formGridPhone" className='form_component'>
                         <Form.Label className="form_label">Телефон</Form.Label>
                         <Form.Control 
+                            
                             type="phone" 
                             name='phone' 
                             id='phone'
@@ -194,9 +211,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('phone')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridBithdate">
+                    <Form.Group as={Col} lg={3} xs={12} controlId="formGridBithdate" className='form_component'>
                         <Form.Label className="form_label">Дата рождения</Form.Label>
                         <Form.Control 
+                            
                             type="date" 
                             name='birth_date'
                             id='birth_date'
@@ -209,10 +227,11 @@ export const Form_aggr = () => {
                     </Form.Group>
                 </Row>
 
-                <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridVK">
+                <Row className="mb-3 gy-3">
+                    <Form.Group as={Col} lg={5} xs={12} controlId="formGridVK" className='form_component'>
                         <Form.Label className="form_label">Ссылка на VK</Form.Label>
                         <Form.Control 
+                            
                             type="text" 
                             name='vkurl'
                             id='vkurl'
@@ -224,9 +243,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('vkurl')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridTG">
+                    <Form.Group as={Col} lg={4} xs={12} controlId="formGridTG" className='form_component'>
                         <Form.Label className="form_label">Ссылка на TG</Form.Label>
                         <Form.Control 
+                            
                             placeholder="@student" 
                             name='tgurl'
                             type='text'
@@ -238,9 +258,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('tgurl')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridSex">
+                    <Form.Group as={Col} lg={3} xs={12} controlId="formGridSex" className='form_component'>
                         <Form.Label className="form_label">Пол</Form.Label>
                         <Form.Select 
+                            
                             defaultValue="Мужской" 
                             name='sex'
                             id='sex'
@@ -255,10 +276,11 @@ export const Form_aggr = () => {
                     </Form.Group>
                 </Row>
 
-                <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridUniversity">
+                <Row className="mb-3 gy-3">
+                    <Form.Group as={Col} lg={5} xs={12} controlId="formGridUniversity" className='form_component'>
                         <Form.Label className="form_label">ВУЗ</Form.Label>
                         <Form.Control 
+                            
                             type="text"
                             name='univer'
                             id='univer'
@@ -270,9 +292,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('univer')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridFaculty">
+                    <Form.Group as={Col} lg={4} xs={12} controlId="formGridFaculty" className='form_component'>
                         <Form.Label className="form_label">Факультет</Form.Label>
                         <Form.Control 
+                            
                             placeholder="МИЭМ" 
                             name='faculty' 
                             id='faculty'
@@ -284,9 +307,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('faculty')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridCourse">
+                    <Form.Group as={Col} lg={3} xs={12} controlId="formGridCourse" className='form_component'>
                         <Form.Label className="form_label">Курс</Form.Label>
                         <Form.Select 
+                            
                             defaultValue="1" 
                             name='year'
                             id='year'
@@ -306,10 +330,11 @@ export const Form_aggr = () => {
                     </Form.Group>
                 </Row>
 
-                <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridOP">
+                <Row className="mb-3 gy-3">
+                    <Form.Group as={Col} lg={9} xs={12} controlId="formGridOP" className='form_component'>
                         <Form.Label className="form_label">Образовательная программа</Form.Label>
                         <Form.Control 
+                            
                             name='program' 
                             type='text'
                             id='program'
@@ -321,9 +346,10 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('program')}
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridGroup">
+                    <Form.Group as={Col} lg={3} xs={12} controlId="formGridGroup" className='form_component'>
                         <Form.Label className="form_label">Группа</Form.Label>
                         <Form.Control 
+                            
                             placeholder="БИВ230" 
                             name='group' 
                             type='text'
@@ -336,52 +362,70 @@ export const Form_aggr = () => {
                     </Form.Group>
                 </Row>
 
-                <Form.Group className="mb-3" controlId="formGridTransfer">
-                    <Form.Label className="form_label">Нужен ли тебе трансфер?</Form.Label>
-                    <Form.Select 
-                        defaultValue="Да, от Одинцово и обратно" 
-                        name='transfer' 
-                        id='transfer'
-                        className={getFieldClassName('transfer')}
-                        value={formData.transfer || ''}
-                        onChange={handleInputChange}
+                <Row>
+                    <Form.Group as={Col} lg={6} xs={12} className="mb-3 form_component" controlId="formGridTransfer" >
+                        <Form.Label className="form_label">Нужен ли тебе трансфер?</Form.Label>
+                        <Form.Select
+                            
+                            defaultValue="Да, от Одинцово и обратно" 
+                            name='transfer' 
+                            id='transfer'
+                            className={getFieldClassName('transfer')}
+                            value={formData.transfer || ''}
+                            onChange={handleInputChange}
 
-                    >
-                        <option className='form-option' >Да, от Одинцово и обратно</option>
-                        <option>Да, от Парка Победы и обратно</option>
-                        <option>Не нужен</option>
-                    </Form.Select>
-                    {getFieldErrorMessage('transfer')}
-                </Form.Group>
+                        >
+                            <option className='form-option' >Да, от Одинцово и обратно</option>
+                            <option>Да, от Парка Победы и обратно</option>
+                            <option>Не нужен</option>
+                        </Form.Select>
+                        {getFieldErrorMessage('transfer')}
+                    </Form.Group>
+                </Row>
                 
-                <Form.Group className="mb-3" controlId="formGridHealth">
-                    <Form.Label className="form_label">Особенности здоровья (при наличии)</Form.Label>
-                    <Form.Control 
-                        type="text" 
-                        name='health' 
-                        id='health'
-                        className={getFieldClassName('health')}
-                        value={formData.health || ''}
-                        onChange={handleInputChange}
-                    />
-                    {getFieldErrorMessage('health')}
-                </Form.Group>
+                <Row>
+                    <Form.Group as={Col} lg={9} xs={12} className="mb-3 form_component" controlId="formGridHealth" >
+                        <Form.Label className="form_label" lang='ru'>Особенности здоровья (при наличии)</Form.Label>
+                        <Form.Control 
+                            
+                            type="text" 
+                            name='health' 
+                            id='health'
+                            className={getFieldClassName('health')}
+                            value={formData.health || ''}
+                            onChange={handleInputChange}
+                        />
+                        {getFieldErrorMessage('health')}
+                    </Form.Group>
+                </Row>
                 
-                <Button type="submit" className="mb-2 form-btn">
-                    Отправить
-                </Button>
+                <Container fluid className='d-flex align-middle justify-content-center py-5'>
+                    <button type="submit"  className="mb-2 form_btn__registration_white wow fadeIn"  data-wow-duration="2s">
+                        <span className="btn_label">
+                            Отправить  
+                        </span>
+                    </button>
+                </Container>
+                
                 
 
             </Form>
 
-            <Modal show={showModal} onHide={handleCloseModal}>
-                <Modal.Body>
-                    {/* <img src="path/to/image.jpg" alt="Изображение" className="img-fluid" /> */}
+            <Modal size="lg" centered show={showModal} onHide={handleCloseModal} className=''>
+                <img src={sun1} className='sun1'/>
+                <img src={sun2} className='sun2'/>
+                <Modal.Body className='mx-1 my-1'>
+                    <Popup_inner />
+                    <Container fluid className='d-flex align-middle justify-content-center pb-5'>
+                        <button onClick={event =>  window.location.href='/'} className="mb-2 form_btn__registration_white_popup"  data-wow-duration="2s">
+                            <span className="btn_label">
+                                Вернуться на главную
+                            </span>
+                        </button>
+                    </Container>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" href="/">вернуться на главную</Button>
-                </Modal.Footer>
             </Modal>
+            
         </Container>
     );
 };
