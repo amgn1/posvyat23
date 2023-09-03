@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .pop-up-thanks_text {
@@ -11,7 +10,6 @@
     width: 100%;
     height: 100%;
     animation: animate 10s linear infinite;
-    
 }
 
 .pop-up-thanks_letter {

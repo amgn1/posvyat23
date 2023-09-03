@@ -4,9 +4,9 @@ import { Container } from "react-bootstrap";
 
 export const Label = () => {
     return (
-        <Container className="label-register pt-5">
+        <Container className="label-transfer pt-5">
             <Container className="text-wrapper" fluid>
-                Регистрация
+                Трансфер
             </Container> 
         </Container>
     );
