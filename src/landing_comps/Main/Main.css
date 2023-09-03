@@ -164,7 +164,7 @@
 }
 
 .btn__registration_white:hover {
-    scale: 1.1;
+    scale: 1;
     color: var(--background);  
     transition: 0.5s all;
     

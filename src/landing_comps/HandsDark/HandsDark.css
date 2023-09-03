@@ -89,3 +89,25 @@
     line-height: 115%; /* 47.203px */
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .hands_btn {
+        text-align: center;
+        display: block;
+        margin: 0 0;
+    }
+}
+
+
+
+@media screen and (max-width: 560px) {
+    .hands_btn {
+        scale: 0.3;
+        margin-top: -30px;
+    }
+
+    .clarifications { 
+        font-size: 40px;
+        /* width: 320px; */
+    }
+}

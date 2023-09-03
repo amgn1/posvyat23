@@ -113,6 +113,29 @@
      }
 }
 
+@media screen and (min-width: 1900px) {
+    
+    .next_btn {
+        right: 5%;
+    }
+
+    .prev_btn {
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    
+    .next_btn {
+        right: -8%;
+    }
+
+    .prev_btn {
+        left: -8%;
+    }
+}
+
+
 @media screen and (max-width: 1600px) {
 
     .slider {
@@ -120,13 +143,6 @@
         height: 450px;
     }
 
-    .next_btn {
-        right: 0%;
-    }
-
-    .prev_btn {
-        left: 0%;
-    }
 
     .main .label {
         font-size: 170px;
@@ -154,6 +170,96 @@
     .slider {
         scale: 0.6;
         height: 350px;
+    }
+
+    .next_btn {
+        right: -40%;
+    }
+
+    .prev_btn {
+        left: -40%;
+    }
+
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .expectations__title {
+        font-size: 80px;
+    }
+
+    
+    .next_btn {
+        right: -50%;
+    }
+
+    .prev_btn {
+        left: -50%;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .expectations__title {
+        font-size: 64px;
+    }
+
+    .slider {
+        scale: 0.4;
+        height: 300px;
+    }
+
+    .next_btn {
+        right: -90%;
+    }
+
+    .prev_btn {
+        left: -90%;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+
+    .expectations__title {
+        font-size: 48px;
+    }
+
+    .slider {
+        scale: 0.3;
+        height: 230px;
+    }
+
+    .next_btn {
+        right: -120%;
+    }
+
+    .prev_btn {
+        left: -120%;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .expectations__title {
+        font-size: 38px;
+    }
+
+    .slider {
+        scale: 0.28;
+        height: 200px;
+    }
+
+    .next_btn {
+        right: -160%;
+    }
+
+    .prev_btn {
+        left: -160%;
     }
 
 }

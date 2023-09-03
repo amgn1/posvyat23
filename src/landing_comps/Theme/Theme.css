@@ -289,7 +289,7 @@
     .theme_cards {
         margin: 0 6%;
     }
-    
+
     .theme__card_title {
         font-size: 32px;
         padding-left: 10px;
@@ -364,6 +364,7 @@
 
     .theme__wrapper {
         height: 400px;
+        margin-top: 100px;
     }
 
     .theme__title {

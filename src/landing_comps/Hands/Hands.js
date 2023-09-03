@@ -11,11 +11,11 @@ function Hands() {
     return (
         <div className='hands__wrapper wow animated'>
 
-            <div className="hands-info_block wow fadeIn animated" data-wow-duration="4s" data-wow-delay="1s">
-                <p className='hands-info_main'>даты</p>
-                <p className='clarifications'>30 сентября 1 октября</p>
-                <p className='hands-info_main' >место проведения:</p>
-                <p className='clarifications'>«Лесной городок»</p>
+            <div className="hands-info_block wow fadeIn animated" data-wow-duration="4s">
+                <p className='hands-info_main wow animated'>даты</p>
+                <p className='clarifications animated'>30 сентября 1 октября</p>
+                <p className='hands-info_main wow animated' >место проведения:</p>
+                <p className='clarifications animated'>«Лесной городок»</p>
                 <div className="hands_btn" data-wow-duration="4s" data-wow-delay="1s">
                     <a href="/register" className="hands_btn_label">Регистрация</a>
                 </div>

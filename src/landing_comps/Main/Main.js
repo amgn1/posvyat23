@@ -12,16 +12,6 @@ export const Main = () => {
         }).init();
     })
 
-    // useEffect (() => {
-    //     new WOW.WOW({
-    //         live: false
-    //     }).init();
-    //   }, [])
-
-    // $( document ).ready(function() {
-    //     new WOW().init()
-    // });
-
     return (
         <div className="main">
             <Container className="element-main-wrapper ">
