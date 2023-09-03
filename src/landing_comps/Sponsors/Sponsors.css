@@ -57,6 +57,20 @@ body {
         transform: translateX(-50%);
     }
 }
+@media screen and (min-width: 1800px) {
+    .marquee-infinite span {
+        scale: 1.5;
+        padding: 10px 0;
+    }
+
+    .marquee-infinite img {
+        padding: 15px 0;
+    }
+
+    .marquee-infinite div {
+        width: 250%;
+    }
+}
 
 @media screen and (max-width: 1600px) {
 
@@ -69,3 +83,28 @@ body {
         height: 90%;
     }
 }
+
+@media screen and (max-width: 1024px) {
+
+    .marquee-infinite img {
+        height: 100%;
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .marquee-infinite img {
+        scale: 0.6;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .marquee-infinite span {
+        width: 80%;
+        scale: 0.8;
+        max-width: -10px;
+    }
+}
+

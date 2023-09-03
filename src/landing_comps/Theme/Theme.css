@@ -242,7 +242,11 @@
     scale: 1.05;
 }
 
-
+@media screen and (min-width: 1800px) {
+    .theme__card {
+        height: 540px;
+    }
+}
 
 
 
@@ -274,12 +278,21 @@
 }
 
 @media screen and (max-width: 1280px) {
+    .theme__wrapper {
+        height: 800px;
+    }
+
     .theme__title {
         font-size: 80px;
     }
 
     .theme_cards {
         margin: 0 6%;
+    }
+    
+    .theme__card_title {
+        font-size: 32px;
+        padding-left: 10px;
     }
 
     .theme__card {
@@ -292,6 +305,10 @@
 }
 
 @media screen and (max-width: 960px) {
+    .theme__wrapper {
+        height: 700px;
+    }
+
     .theme__title {
         font-size: 70px;
     }
@@ -314,6 +331,65 @@
     }
     
 }
+
+@media screen and (max-width: 768px) {
+    .theme__wrapper {
+        height: 550px;
+    }
+
+    .theme__title {
+        font-size: 50px;
+    }
+    .theme__card {
+        height: 210px;
+        border-radius: 30px;
+    }
+
+    .theme__card_title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .theme__card_descr {
+        font-size: 12px;
+    }
+
+    .theme__cards_descr {
+        gap: 26px;
+    }
+    
+}
+
+@media screen and (max-width: 560px) {
+
+    .theme__wrapper {
+        height: 400px;
+    }
+
+    .theme__title {
+        font-size: 26px;
+    }
+
+    .theme__card_title {
+        font-size: 16px;
+        text-align: center;
+    }
+    .theme__card {
+        height: 160px;
+        border-radius: 20px;
+    }
+
+    .theme__cards {
+        gap: 15px;
+    }
+
+    .theme__cards_descr {
+        gap: 15px;
+    }
+
+
+}
+
 
 
 

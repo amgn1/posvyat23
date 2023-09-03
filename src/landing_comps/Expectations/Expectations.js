@@ -28,7 +28,8 @@ function Expectations() {
             transform: "none", 
             zIndex: 2, 
             filter: "none",
-            opacity: 1
+            opacity: 1,
+            scale: '1'
         })
         for (var i = active + 1; i < items.length; i++){
             stt++;

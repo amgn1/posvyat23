@@ -62,11 +62,11 @@ function Ticket() {
       });
 
     return (
-        <div className="ticket__wrapper wow fadeIn" data-wow-duration="3s">
+        <div className="ticket__wrapper wow animate__rotate OutDownLeft" data-wow-duration="3s">
 
             <div className="ticket_img__wrapper">
                 <img src={ticket_part1} alt="ticket_part1" className='ticket_background_img1'/>
-                <img src={ticket_part2} alt="ticket_part2" className='ticket_background_img2'/>
+                <img src={ticket_part2} alt="ticket_part2" className='wow animated ticket_background_img2'/>
                 <img src={dash_line} alt="" className='dash_line'/>
                 <img src={people} alt="people" className='people' />
                 <p className='ticket_text'>Билеты на Посвят продаются в несколько волн — с новой волной цена увеличивается.

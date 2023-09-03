@@ -9,7 +9,6 @@ export const Main = () => {
 
     document.addEventListener("DOMContentLoaded", function(){
         new WOW.WOW({
-            live: false
         }).init();
     })
 

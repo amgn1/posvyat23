@@ -33,6 +33,7 @@
     align-items:left;
     gap: 20px;
     left: 50%;
+    z-index: 1000;
 }
 .nv_list_item {
     font-family: "Object Sans-Regular", Helvetica;
@@ -42,6 +43,12 @@
     font-weight: 400;
     font-size: 20px;
     z-index: 20;
+    transition: 0.5s all;
+}
+
+.nv_list_item:hover {
+    text-decoration: none;
+    color: var(--yellow_main);
 }
 .nav-link {
     position: relative;
@@ -139,6 +146,7 @@
 
 .hamburger {
     display: none;
+    z-index: 1001;
 }
 .hamburger__span {
     display: block;

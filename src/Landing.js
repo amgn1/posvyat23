@@ -30,16 +30,14 @@ export const LandingPage = () => {
             <Main className = 'main'/>
             <About className = "about"/>
             <Expectations/>
-            
-
-                        <Spnsrs className = "spnsrs"/>
-                        <Theme/>
-                        <Hands/>
-                        <Memories/>
-                        <MemoriesRow2/>
-                        <MemoriesRow3/>
-                        <Ticket/>
-                        <BackToTopBtn/>
+            <Spnsrs className = "spnsrs"/>
+            <Theme/>
+            <Hands/>
+            <Memories/>
+            <MemoriesRow2/>
+            <MemoriesRow3/>
+            <Ticket/>
+            <BackToTopBtn/>
         </div>
     );
 };

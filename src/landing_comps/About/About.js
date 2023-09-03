@@ -29,7 +29,7 @@ export const About = () => {
                 </div>
 
                 <button className="btn__registration wow fadeIn"  data-wow-duration="2s">
-                    <a href="/register" className="btn_label">Регистрация</a>
+                    <a href="/register" className="btn__registration__label">Регистрация</a>
                 </button>
 
 
