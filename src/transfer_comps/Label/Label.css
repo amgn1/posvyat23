@@ -1,0 +1,31 @@
+.label-transfer {
+    padding-left: 0;
+    padding-right: 0;
+    border: 0px none;
+    padding-bottom: 1.5rem;
+}
+
+.label-transfer .text-wrapper {
+    color: rgb(195, 56, 36, 1);
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 50px;
+    font-weight: 400;
+    width: 100%;
+    padding: 0;
+    /* letter-spacing: 0; */
+    line-height: 80px;
+    white-space: nowrap;
+    border: 0px none;
+}
+    @media screen and (min-width: 992px) {
+        .label-transfer .text-wrapper {
+            font-size: calc(50px + 173.2 * ((100vw - 992px) / 608));
+            line-height: calc(80px + 143.2 * ((100vw - 992px) / 608));
+        }
+    }
+    @media screen and (min-width: 1600px) {
+        .label-transfer .text-wrapper {
+            font-size: 223.2px;
+            line-height: 253.2px;
+        }
+    }

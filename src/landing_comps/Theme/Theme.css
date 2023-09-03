@@ -1,0 +1,319 @@
+.theme__wrapper {
+    padding-bottom: 300px;
+    background-image: url('../../ui/mock/noise.png');
+    padding: 6% 0%;
+    height: 1100px;
+}
+
+.theme__title {
+    color: #000;
+    margin: 0;
+    margin-bottom: 3%;
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 120.689px;
+    font-weight: 500;
+    line-height: 100%; /* 120.689px */
+    text-align: center;
+
+}
+
+.theme__cards {
+    box-sizing: border-box;
+    margin-top: 40px;
+    display: grid;
+    margin: 0 10%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 59px;
+}
+
+.theme__card {
+    position: relative;
+    height: 461px;
+    border-radius: 53px 53px 51px 51px;
+    background-image: white;
+    overflow: hidden;
+    transition: 0.5s all;
+    &.suits {
+        background-image: linear-gradient(to bottom, #F6B46D, #FDE4C3);
+    };
+
+    &.atmosphere {
+        background-image: linear-gradient(to bottom, #84B9DB, #DDE4E2);
+    };
+    
+    &.games {
+        background-image: linear-gradient(to bottom, #ADC178, #ECE9CB);
+    }
+
+}
+
+.theme__card_img {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 11;
+
+}
+
+.theme__card_title {
+    color: var(--background_black);
+    font-family: "Kyiv Region-Regular", Helvetica;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 64px */
+
+    margin-top: 4%;
+}
+
+.theme__card_descr {
+    /* position: absolute; */
+    color: var(--background_black);
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 115%; /* 27.6px */
+    /* top: 570px; */
+    /* z-index: 1000; */
+    margin-top: 4%;
+
+}
+
+.theme__cards_descr {
+    box-sizing: border-box;
+    margin-top: 40px;
+    display: grid;
+    margin: 0 10%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 59px;
+}
+
+/* TODO: анимация для карточек, попросить полное солнышко */
+.white_sun {
+    /* color: white; */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+    animation-name:  sun;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition:  all .1s;
+}
+
+/* left animation */
+
+.left {
+    position: absolute;
+    left: -5%;
+    top: 2%;
+    width: 60%;
+    -webkit-animation: left 15s linear infinite;
+    -moz-animation: left 15s linear infinite;
+    animation: left 15s linear infinite
+
+}
+
+@-webkit-keyframes left  {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes left {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes left {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+.right {
+    position: absolute;
+    width: 60%;
+    right: 0;
+    -webkit-animation: right 15s linear infinite;
+    -moz-animation: right 15s linear infinite;
+    animation: right 15s linear infinite
+}
+
+
+@-webkit-keyframes right  {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes right {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes right {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-15deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes sun {
+    0% {
+        transform: rotate(0);
+        transition:  all .2s;
+    }
+
+    50% {
+        transform: rotate(5deg);
+        transition:  all .2s;
+    }
+
+     100% {
+        transform: rotate(0);
+        
+     }
+}
+
+.white_sun {
+    position: absolute;
+    width: 100%;
+    scale: 1.2;
+    left: 0%;
+    top: -50%;
+    -webkit-animation: sunSpin 30s linear infinite;
+    -moz-animation: sunSpin 30s linear infinite;
+    animation: sunSpin 30s linear infinite
+}
+
+@-webkit-keyframes sunSpin  {
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes sunSpin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+@keyframes sunSpin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+.theme__card:hover {
+    scale: 1.05;
+}
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+
+    .theme__wrapper {
+        height: 800px;
+    }
+
+    .theme__title {
+        font-size: 90px;
+    }
+
+    .theme__cards {
+        gap: 26px;
+    }
+    .theme__card {
+        height: 400px;
+    }
+
+    .theme__card_title {
+        font-size: 45px;
+    }
+
+    .theme__card_descr {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .theme__title {
+        font-size: 80px;
+    }
+
+    .theme_cards {
+        margin: 0 6%;
+    }
+
+    .theme__card {
+        height: 320px;
+    }
+    .white_sun {
+        top: -40%;
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+    .theme__title {
+        font-size: 70px;
+    }
+    .theme__cards {
+        margin: 0 4%;
+    }
+    .theme__cards_descr {
+        margin: 0 4%;
+        font-size: 16px;
+    }
+
+    .theme__card {
+        height: 280px;
+    }
+    .white_sun {
+        top: -40%;
+    }
+    .theme__card_title {
+        font-size: 38px;
+    }
+    
+}
+
+
+

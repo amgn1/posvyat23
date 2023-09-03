@@ -1,0 +1,264 @@
+.form_container {
+    padding-top: 4.839898vh;
+    padding-left: 16.145833vw;
+    padding-right: 16.145833vw;
+    margin: 0;
+
+}
+
+.form-frame { 
+    border: 3px solid;
+    border-color: #aaaaaa;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+    padding: 24px 40px;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+}
+
+.form-frame:focus {
+    border-color: rgba(246, 180, 96, 1);
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+
+.form-text-wrapper {
+    color: #878787;
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: calc(16px + (24 - 16) * ((100vw - 390px) / (1728 - 390)));
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: calc(16px + (24 - 16) * ((100vw - 390px) / (1728 - 390)));
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.form_label {
+    border: 0px none;
+    color: rgba(246, 180, 96, 1);
+    font-family: "Object Sans-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 100%;
+    width: 100%;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+  @media screen and (min-width: 600px) {
+    .form_label {
+      font-size: calc(24px + 16 * ((100vw - 600px) / 600));
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .form_label {
+      font-size: 32px;
+    }
+  }
+
+.form_btn__registration_white {
+    border: none;
+    background: url('../../ui/mock/btn_outline.png');
+    box-sizing: border-box;
+    width: 300px;
+    align-items: center;
+    font-size: 34px;
+    justify-content: center;
+    padding: 20px 30px 28px;
+    color: var(--background);
+    margin-right: 0;
+}
+
+.btn_label {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    line-height: 32px;
+    overflow: hidden;
+}
+
+.form-option {
+    background-color: transparent;
+}
+
+.modal-content {
+    border-radius: 27.64px;
+    display: flex;
+    border: 6px solid rgba(195, 56, 36, 1);;
+    background-color: #1b1818;
+    overflow: hidden;
+}
+
+.form_btn__registration_white_popup {
+    border: none;
+    background: url('../../ui/mock/white_outline.png'); 
+    box-sizing: border-box;
+    width: 298px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 298px 59px;
+    align-items: center;
+    font-size: 21.8px;
+    justify-content: center;
+    padding: 20px 30px 34px;
+    color: var(--background);
+    margin-right: 0;
+}
+
+.form_btn__registration_white_popup:hover {
+    background: url('../../ui/mock/bezh_outline.png');
+}
+
+@media screen and (min-width: 600px) {
+    .form_btn__registration_white_popup {
+        font-size: calc(21.8px + 9 * ((100vw - 600px) / 600));
+        width: calc(298px + 146 * ((100vw - 600px) / 600));
+        background-size: calc(298px + 146 * ((100vw - 600px) / 600));
+    }
+}
+@media screen and (min-width: 1200px) {
+    .form_btn__registration_white_popup {
+        font-size: 30.8px;
+        width: 444px;
+        background-size: auto;
+    }
+}
+
+.sun1-transfer-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 330px; 
+    height: 355px;
+    overflow: hidden;
+}
+
+.sun1-transfer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 330px; 
+    height: 355px;
+    margin: -160px -160px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .sun1-transfer {
+        animation: sun1-transfer-spin infinite 20s linear;
+    }
+}
+@media screen and (min-width: 600px) {
+    .sun1-transfer-wrapper {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
+    }
+}
+@media screen and (min-width: 600px) {
+    .sun1-transfer {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
+    }
+}
+@media screen and (min-width: 1200px) {
+    .sun1-transfer-wrapper {
+        width: 420px; 
+        height: 445px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .sun1-transfer {
+        width: 420px; 
+        height: 445px;
+    }
+}
+
+.sun2-transfer-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 330px; 
+    height: 355px;
+    overflow: hidden;
+}
+
+.sun2-transfer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 330px; 
+    height: 355px;
+    margin: -160px -160px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .sun2-transfer {
+        animation: sun2-transfer-spin infinite 20s linear;
+    }
+}
+@media screen and (min-width: 600px) {
+    .sun2-transfer-wrapper {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
+    }
+}
+@media screen and (min-width: 600px) {
+    .sun2-transfer {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
+    }
+}
+@media screen and (min-width: 1200px) {
+    .sun2-transfer-wrapper {
+        width: 420px; 
+        height: 445px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .sun2-transfer {
+        width: 420px; 
+        height: 445px;
+    }
+}
+
+@keyframes sun1-transfer-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sun2-transfer-spin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.alert {
+    position: fixed;
+    top: 50%;
+    opacity: 0.9;
+    background-color: rgb(44, 11, 14);
+    border-color: rgb(132, 32, 41);
+    color: rgb(234, 134, 143);
+}
+
+@media screen and (min-width: 600px) {
+    .alert {
+        right: 1.5%;
+        top: 15.5%;    
+    }
+}

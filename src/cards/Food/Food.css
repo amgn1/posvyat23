@@ -1,0 +1,62 @@
+
+@font-face {
+    font-family: "Kyiv Region-Regular"; 
+    src: url(../../fonts/KyivRegion-Regular.ttf); /*URL to font*/
+  }
+  
+@font-face {
+    font-family: "Object Sans-Regular"; 
+    src: url(../../fonts/ObjectSans-Regular.otf); /*URL to font*/
+}
+
+  
+.card_food {
+    width: 1014.52px;
+    height: 527.457px;
+    border-radius: 70px;
+    border: 4.661px solid var(--red_main);
+    background: #FFF6E6;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    padding: 73px 59px 60px;
+}
+
+.card_title_food {
+    color: var(--background_black);
+    font-family: Kyiv Region-Regular;
+    font-size: 63.921px;
+    font-weight: 500;
+    line-height: 100%; /* 63.921px */
+    margin: 0;
+    padding: 0;
+    width: 527.457px;
+}
+
+.card_descr_food {
+    color: var(--background_black);
+    font-family: Object Sans-Regular;
+    font-size: 27.965px;
+    font-weight: 400;
+    line-height: 120%; /* 33.558px */
+    width: 482.402px;
+    margin: 0;
+    padding: 0;
+    margin-top: 48px;
+
+}
+
+.card-food_img {
+    width: 48%;
+    position: absolute;
+    left: 57%;
+    bottom: -10%;
+}
+
+@media screen and (max-width: 1600px) {
+    .card_food {
+        scale: 0.75;
+    
+    }
+}

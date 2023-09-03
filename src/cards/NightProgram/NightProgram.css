@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: "Kyiv Region-Regular"; 
+    src: url(../../fonts/KyivRegion-Regular.ttf); /*URL to font*/
+  }
+  
+@font-face {
+    font-family: "Object Sans-Regular"; 
+    src: url(../../fonts/ObjectSans-Regular.otf); /*URL to font*/
+}
+
+  
+.card_night {
+    width: 1014.52px;
+    height: 527.457px;
+    border-radius: 70px;
+    border: 4.661px solid var(--red_main);
+    background: #FFF6E6;
+    position: relative;
+    box-sizing: border-box;
+
+    padding: 60px 71px 60px;
+
+}
+
+.card_title_night {
+    color: var(--background_black);
+    font-family: Kyiv Region-Regular;
+    font-size: 63.921px;
+    font-weight: 500;
+    line-height: 100%; /* 63.921px */
+    margin: 0;
+    padding: 0;
+    width: 367.433px;
+}
+
+.card_descr_night {
+    color: var(--background_black);
+    font-family: Object Sans-Regular;
+    font-size: 27.965px;
+    font-weight: 400;
+    line-height: 120%; /* 33.558px */
+    width: 482.402px;
+    margin: 0;
+    padding: 0;
+    margin-top: 48px;
+
+}
+
+.card-night_program_img {
+    width: 50%;
+    position: absolute;
+    left: 55%;
+    bottom: -10%;
+}

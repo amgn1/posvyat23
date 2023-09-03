@@ -5,3 +5,15 @@
     justify-content: center;
     width: 100%;
     }
+
+.main {
+    position: relative;
+}
+.about {
+    position: absolute;
+    top: -10%;
+}
+
+/* .theme {
+    scale: 0.7;
+} */

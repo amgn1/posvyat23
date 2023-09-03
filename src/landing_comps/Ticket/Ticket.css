@@ -1,0 +1,258 @@
+.red {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+.test {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+}
+
+.green {
+    background-color: green;
+    width: 200px;
+    height: 100px;
+}
+
+.ticket__wrapper{
+    background-color: var(--background);
+    max-height: 881px;
+    padding: 3% 7% 4% 5%;
+    background-image: url('../../ui/mock/noise.png');
+    /* position: relative; */
+    /* position: relative; */
+}
+
+.ticket_img__wrapper{
+    /* background: green; */
+    /* margin: 0 auto; */
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    transform: rotate(-4deg);
+}
+
+.ticket_background_img2 {
+    width: 20%;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+    /* position: absolute; */
+}
+
+
+@-webkit-keyframes spin  {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(10deg);
+        -webkit-transform-origin-y: 600px;
+        -webkit-transform-origin-x: -250px;
+        -webkit-cubic-bezier: (.05,-0.64,.77,.29);
+        /* cubic-bezier(.05,-0.64,.77,.29) */
+        /* -webkit-transform: translate(50px); */
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+
+    }
+    100% {
+        -webkit-transform: rotate(10deg);
+        -webkit-transform-origin-y: 600px;
+        -webkit-transform-origin-x: -250px;
+        -webkit-cubic-bezier: (.05,-0.64,.77,.29);
+        /* -webkit-transform: translate(50px); */
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+
+
+    }
+    100% {
+        -webkit-transform: rotate(10deg);
+        -webkit-transform-origin-y: 600px;
+        -webkit-transform-origin-x: -250px;
+        -webkit-cubic-bezier: (.05,-0.64,.77,.29);
+        /* -webkit-transform: translate(50px); */
+    }
+}
+
+
+.ticket_background_img1 {
+    width: 80%;
+    position: relative;
+}
+
+.dash_line {
+    position: absolute;
+    right: 19.6%;
+    top: 10%;
+    height: 80%;
+    z-index: 1;
+}
+
+.ticket_text {
+    position: absolute;
+    top: 12%;
+    width: 44%;
+    left: 5%;
+    z-index: 1;
+
+    color: var(--background);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Object Sans-Regular;
+    font-size: 27.606px;
+    font-weight: 400;
+    line-height: 115%; /* 31.747px */
+    /* width: 30%; */
+}
+
+.people {
+    position: absolute; 
+    top: 40%;
+    width: 30%;
+    left: 48%;
+}
+
+.ticket_btn {
+    background: url('../../ui/mock/btn_outline_white_rotate.png');
+    box-sizing: border-box;
+    width: 280px;
+    height: 90px;
+    align-items: center;
+    color: var(--background);
+    font-size: 34px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 15px 30px;
+    margin-top: 9%;
+    border: none;
+    position: absolute;
+    top: 38%;
+    left: 5%;
+}
+
+.footer_share{
+    height: 85px;
+    gap: 10px;
+    display: flex;
+    justify-content: start;
+    margin-top: 12%;
+}
+
+.share_vk {
+    background: url('../../ui/share/vk_red.png');
+    width: 85px;
+    height: 85px;
+}
+
+.share_tg {
+    background: url('../../ui/share/telegram_red.png');
+    width: 85px;
+    height: 85px;
+}
+
+.ticket-mini {
+    width: 620px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+
+.ticket-mini__img {
+    width: 100%;
+}
+
+.ticket-mini__text {
+    color: var(--background);
+    font-family: Object Sans-Regular;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 115%; /* 32.93px */
+    z-index: 1;
+    position: absolute;
+    /* padding: 50px; */
+    width: 75%;
+    top: 56%;
+    left: 15%;
+
+}
+
+.footer_red {
+    box-sizing:border-box;
+    display: flex;
+    background-color:#C33824;
+    width: 100%;
+    height: 138px;
+    padding: 40px;
+    display: none;
+}
+
+.footer__icon_vk {
+    background: url('../../ui/share/vk_yellow.png');
+    width: 64px;
+    height: 64px;
+}
+
+.footer__icon_tg {
+    background: url('../../ui/share/telegram_yellow.png');
+    width: 64px;
+    height: 64px;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    .ticket_text {
+        font-size: 24px;
+        /* width: 30%; */
+    }
+    
+    .ticket_btn {
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ticket_text {
+        font-size: 22px;
+        /* width: 30%; */
+    }
+
+    .ticket-mini {
+        display: flex;
+    }
+    .ticket_img__wrapper{
+        display: none;
+    }
+
+    .ticket__wrapper{
+        padding: 3% 0% 4% 0%;
+    }
+
+    .footer_red {
+        display: flex;
+    }
+
+    .footer_share{
+        display: none;
+    }
+}
+/* 
+.share_tg {
+    background: url('../../ui/share/tg.png');
+}  */
+

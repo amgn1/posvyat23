@@ -1,0 +1,46 @@
+body {
+    position: relative;
+}
+.backtotop {
+    background: none;
+    background: url('../../ui/mock/up.png');
+    border: none;
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    bottom: 0.9%;
+    /* margin-top: 8%;
+    margin-bottom: 4%; */
+
+    margin-left: 90%;
+
+    animation-name:  infiniteupdown;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition:  all .5s;
+}
+
+@keyframes infiniteupdown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+     100% {
+        transform: translateY(0px);
+     }
+}
+
+@media screen and (max-width: 1280px) {
+    .backtotop {
+        background: url('../../ui/mock/btn-up_yellow.png');
+        width: 90px;
+        height: 68px;
+        z-index: 11;
+        bottom: -13%;
+    }
+}
