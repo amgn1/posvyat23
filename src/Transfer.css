@@ -1,0 +1,23 @@
+.main-container-transfer {
+    border: 0px none;
+    background-image: url(./ui/mock/noise.png);
+    background-color: #1b1818;
+}
+
+@media screen and (min-width: 992px) {
+    .main-container-transfer {
+        background-image: url(./ui/mock/noise.png), url('./ui/mock/hand (2).png'), url('./ui/mock/hand (1).png');
+        background-repeat: repeat, no-repeat, no-repeat;
+        background-position: center, bottom 0 right 0, top 0 left 0;
+        background-size: auto, calc(267px + 197 * ((100vw - 992px) / 608)), calc(267px + 197 * ((100vw - 992px) / 608));
+    }
+}
+@media screen and (min-width: 1600px) {
+    .main-container-transfer {
+        background-image: url(./ui/mock/noise.png), url('./ui/mock/hand (2).png'), url('./ui/mock/hand (1).png');
+        background-repeat: repeat, no-repeat, no-repeat;
+        background-position: center, bottom 0 right 0, top 0 left 0;
+        background-size: auto, 464px, 464px;
+    }
+}
+

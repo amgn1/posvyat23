@@ -6,12 +6,9 @@ import { Form_aggr } from "./register_comps/Form/Form";
 
 export const RegisterPage = () => {
     return (
-        <Container fluid className="main-container mt-auto">
-            <Container fluid className='label-wrapper mt-auto'>
-                <Label />
-            </Container>
+        <Container fluid className="main-container-register mt-auto">
+            <Label />
             <Form_aggr />
-           
         </Container>
 
     );

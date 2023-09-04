@@ -1,0 +1,26 @@
+.pop-up-thanks_animated {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.pop-up-thanks_logo {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bus {
+    position: relative;
+    animation: busAnimation 3s linear forwards;
+}
+
+@keyframes busAnimation {
+    0% {
+        transform: translateX(80%) scale(0.4);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}

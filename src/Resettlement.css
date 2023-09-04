@@ -1,11 +1,11 @@
-.main-container-register {
+.main-container-resettlement {
     border: 0px none;
     background-image: url(./ui/mock/noise.png);
     background-color: #1b1818;
 }
 
 @media screen and (min-width: 992px) {
-    .main-container-register {
+    .main-container-resettlement {
         background-image: url(./ui/mock/noise.png), url('./ui/mock/people (1).png'), url('./ui/mock/hand.png');
         background-repeat: repeat, no-repeat, no-repeat;
         background-position: center, bottom 0 right 0, top 0 left 0;
@@ -13,7 +13,7 @@
     }
 }
 @media screen and (min-width: 1600px) {
-    .main-container-register {
+    .main-container-resettlement {
         background-image: url(./ui/mock/noise.png), url('./ui/mock/people (1).png'), url('./ui/mock/hand.png');
         background-repeat: repeat, no-repeat, no-repeat;
         background-position: center, bottom 0 right 0, top 0 left 0;

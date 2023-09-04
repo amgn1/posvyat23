@@ -6,8 +6,7 @@
 
 }
 
-.form-frame {
-    
+.form-frame { 
     border: 3px solid;
     border-color: #aaaaaa;
     border-radius: 30px;
@@ -110,130 +109,127 @@
     align-items: center;
     font-size: 21.8px;
     justify-content: center;
-    padding: 20px 30px 34px;  
+    padding: 20px 30px 34px;
     color: var(--background);
     margin-right: 0;
 }
 
 .form_btn__registration_white_popup:hover {
     background: url('../../ui/mock/bezh_outline.png');
-    
 }
 
 @media screen and (min-width: 600px) {
     .form_btn__registration_white_popup {
-      font-size: calc(21.8px + 9 * ((100vw - 600px) / 600));
-      width: calc(298px + 146 * ((100vw - 600px) / 600));
-      background-size: calc(298px + 146 * ((100vw - 600px) / 600));
+        font-size: calc(21.8px + 9 * ((100vw - 600px) / 600));
+        width: calc(298px + 146 * ((100vw - 600px) / 600));
+        background-size: calc(298px + 146 * ((100vw - 600px) / 600));
     }
-  }
-  @media screen and (min-width: 1200px) {
+}
+@media screen and (min-width: 1200px) {
     .form_btn__registration_white_popup {
         font-size: 30.8px;
         width: 444px;
         background-size: auto;
     }
-  }
+}
 
-.sun1-register-wrapper {
+.sun1-transfer-wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px; 
-    height: 325px;
+    width: 330px; 
+    height: 355px;
     overflow: hidden;
 }
 
-.sun1-register {
+.sun1-transfer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px; 
-    height: 325px;
+    width: 330px; 
+    height: 355px;
     margin: -160px -160px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .sun1-register {
-      animation: sun1-register-spin infinite 20s linear;
+    .sun1-transfer {
+        animation: sun1-transfer-spin infinite 20s linear;
     }
 }
 @media screen and (min-width: 600px) {
-    .sun1-register-wrapper {
-        width: calc(300px + 90 * ((100vw - 600px) / 600)); 
-        height: calc(325px + 90 * ((100vw - 600px) / 600)); 
+    .sun1-transfer-wrapper {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
     }
 }
 @media screen and (min-width: 600px) {
-    .sun1-register {
-        width: calc(300px + 90 * ((100vw - 600px) / 600)); 
-        height: calc(325px + 90 * ((100vw - 600px) / 600)); 
+    .sun1-transfer {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
     }
 }
 @media screen and (min-width: 1200px) {
-    .sun1-register-wrapper {
-        width: 390px; 
-        height: 415px;
+    .sun1-transfer-wrapper {
+        width: 420px; 
+        height: 445px;
     }
 }
 @media screen and (min-width: 1200px) {
-    .sun1-register {
-        width: 390px; 
-        height: 415px;
+    .sun1-transfer {
+        width: 420px; 
+        height: 445px;
     }
 }
 
-.sun2-register-wrapper {
+.sun2-transfer-wrapper {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 200px; 
-    height: 217px;
+    width: 330px; 
+    height: 355px;
     overflow: hidden;
-
 }
 
-.sun2-register {
+.sun2-transfer {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 200px; 
-    height: 217px;
-    margin: -110px;
+    width: 330px; 
+    height: 355px;
+    margin: -160px -160px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .sun2-register {
-        animation: sun2-register-spin infinite 20s linear;
+    .sun2-transfer {
+        animation: sun2-transfer-spin infinite 20s linear;
     }
 }
 @media screen and (min-width: 600px) {
-    .sun2-register-wrapper {
-        width: calc(200px + 90 * ((100vw - 600px) / 600)); 
-        height: calc(217px + 90 * ((100vw - 600px) / 600)); 
+    .sun2-transfer-wrapper {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
     }
 }
 @media screen and (min-width: 600px) {
-    .sun2-register {
-        width: calc(200px + 90 * ((100vw - 600px) / 600)); 
-        height: calc(217px + 90 * ((100vw - 600px) / 600)); 
+    .sun2-transfer {
+        width: calc(330px + 90 * ((100vw - 600px) / 600)); 
+        height: calc(355px + 90 * ((100vw - 600px) / 600)); 
     }
 }
 @media screen and (min-width: 1200px) {
-    .sun2-register-wrapper {
-        width: 290px; 
-        height: 307px;
+    .sun2-transfer-wrapper {
+        width: 420px; 
+        height: 445px;
     }
 }
 @media screen and (min-width: 1200px) {
-    .sun2-register {
-        width: 290px; 
-        height: 307px;
+    .sun2-transfer {
+        width: 420px; 
+        height: 445px;
     }
 }
 
-
-@keyframes sun1-register-spin {
+@keyframes sun1-transfer-spin {
     from {
         transform: rotate(0deg);
     }
@@ -242,11 +238,27 @@
     }
 }
 
-@keyframes sun2-register-spin {
+@keyframes sun2-transfer-spin {
     from {
         transform: rotate(360deg);
     }
     to {
         transform: rotate(0deg);
+    }
+}
+
+.alert {
+    position: fixed;
+    top: 50%;
+    opacity: 0.9;
+    background-color: rgb(44, 11, 14);
+    border-color: rgb(132, 32, 41);
+    color: rgb(234, 134, 143);
+}
+
+@media screen and (min-width: 600px) {
+    .alert {
+        right: 1.5%;
+        top: 15.5%;    
     }
 }
