@@ -10,17 +10,12 @@
     height: 200px;
 }
 
-.green {
-    background-color: green;
-    width: 200px;
-    height: 100px;
-}
-
 .ticket__wrapper{
     background-color: var(--background);
     max-height: 881px;
     padding: 3% 7% 4% 5%;
     margin: 10% 0 ;
+    background-image: url(../../ui/mock/noise.png);  
     
     /* position: relative; */
     /* position: relative; */
@@ -117,7 +112,6 @@
     font-size: 27.606px;
     font-weight: 400;
     line-height: 115%; /* 31.747px */
-    /* width: 30%; */
 }
 
 .people {
@@ -280,14 +274,26 @@
     }
 }
 
+@media screen and (max-width: 1280px) {
+    .ticket_text {
+        font-size: 20px;
+        /* width: 30%; */
+    }
+    
+    .ticket_btn {
+        scale: 0.7;
+    }
+}
+
 @media screen and (max-width: 960px) {
     .ticket_text {
         font-size: 22px;
-        /* width: 30%; */
     }
 
     .ticket-mini {
         display: flex;
+        width: 80%;
+        overflow: hidden;
     }
     .ticket_img__wrapper{
         display: none;
@@ -306,24 +312,116 @@
     }
 }
 
+
+@media screen and (max-width: 768px) {
+    .ticket-mini {
+        margin-right: 0px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+
+    .ticket-mini__img {
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .ticket-mini__text {
+        font-size: 18px;
+        width: 50%;
+        top: 58%;
+        left: 26%;
+    }
+
+    .ticket-mini_btn {
+        scale: 0.6;
+        display: block;
+        margin: 0 auto;
+        top: 22%;
+        left: 41%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .ticket-mini__text {
+        font-size: 14px;
+        width: 50%;
+        top: 58%;
+        left: 26%;
+    }
+
+    .ticket-mini_btn {
+        scale: 0.4;
+        display: block;
+        margin: 0 auto;
+        top: 20%;
+        left: 29%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .ticket-mini__text {
+        font-size: 12px;
+        width: 50%;
+        top: 58%;
+        left: 26%;
+    }
+
+    .ticket-mini_btn {
+        scale: 0.4;
+        display: block;
+        margin: 0 auto;
+        top: 18%;
+        left: 26%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .ticket-mini__text {
+        font-size: 11px;
+        width: 50%;
+        top: 58%;
+        left: 26%;
+    }
+
+    .ticket-mini_btn {
+        scale: 0.35;
+        display: block;
+        margin: 0 auto;
+        top: 16%;
+        left: 22%;
+    }
+}
+
+
+/* 
 @media screen and (max-width: 768px) {
 
     .ticket__wrapper {
         padding: 0px;
         width: 100%;
         box-sizing: border-box;
-        height: 500px;
-        /* width: 500px; */
+        height: 400px;
+        position: relative;
     } 
 
     .ticket-mini {
         scale: 0.6  ;
-        margin-bottom: -170px;
-        /* width: 500px; */
+        margin-bottom: 0px;
+        position: absolute;
+        position: relative;
     }
 
-    ticket-mini__img {
-            
+    .ticket-mini__img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-20%, 0);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: -24%;
+
     }
 
     .ticket_btn {
@@ -332,6 +430,11 @@
         top: 0%;
         left: 50%;
         transform: translateX(0, 50%);
+    }
+
+    .footer_red {
+        position: absolute;
+        bottom: -300px;
     }
 
 }
@@ -347,7 +450,7 @@
         scale: 0.4;
         top: 0%;
     }
-}
+} */
 /* 
 .share_tg {
     background: url('../../ui/share/tg.png');

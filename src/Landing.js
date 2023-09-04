@@ -26,7 +26,7 @@ export const LandingPage = () => {
 
 
     return (
-        <div className="">
+        <>
             <Main className = 'main'/>
             <About className = "about"/>
             <Expectations/>
@@ -38,7 +38,7 @@ export const LandingPage = () => {
             <MemoriesRow3/>
             <Ticket/>
             <BackToTopBtn/>
-        </div>
+        </>
     );
 };
 

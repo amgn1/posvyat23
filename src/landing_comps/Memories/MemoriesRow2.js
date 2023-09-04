@@ -28,7 +28,7 @@ function MemoriesRow2() {
                         <img src={photo9} alt="photo9" />
                     </span>
                     <span>
-                    <img src={photo1} alt="photo1" />
+                        <img src={photo1} alt="photo1" />
                         <img src={photo2} alt="photo2" />
                         <img src={photo3} alt="photo3" />
                         <img src={photo4} alt="photo4" />
@@ -36,7 +36,6 @@ function MemoriesRow2() {
                         <img src={photo6} alt="photo6" />
                         <img src={photo7} alt="photo7" />
                         <img src={photo8} alt="photo8" />
-                        <img src={photo9} alt="photo9" />
                     </span>
 
                 </div>

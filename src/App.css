@@ -30,6 +30,8 @@
 
 .general-box {
   padding: 0;
+  z-index: -1000;
+  height: 10px;
 }
 
 @keyframes App-logo-spin {

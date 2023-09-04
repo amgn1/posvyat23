@@ -79,7 +79,7 @@ function Ticket() {
             </div>
 
             <div className="ticket-mini">
-                <img src={ticket_mini} alt="ticket-mini__img" />
+                <img src={ticket_mini} alt="ticket-mini__img" className="ticket-mini__img"/>
                 <p className='ticket-mini__text'>Билеты на Посвят продаются в несколько волн — с новой волной цена увеличивается.
                 <br /> <br />
                 Смена волны продаж осуществляется по времени.</p>

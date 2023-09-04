@@ -9,7 +9,7 @@ body {
     background-color: var(--background);
     width: 100%;
     /* margin-bottom: 12%; */
-    height: 250px;
+    height: 200px;
     background-image: url('../../../ui/mock/noise.png');
 }
 .row-3__marquee-infinite {
@@ -26,15 +26,15 @@ body {
 
 .row-3__marquee-infinite div {
     display: flex;
-    width: 300%;
-    margin-top: 26px;
+    width: 200%;
     animation: marquee-infinite 10s linear infinite;
 }
 
 .row-3__marquee-infinite span {
-    width: 150%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    gap: 5px;
 }
 
 .row-3__marquee-infinite img {
@@ -46,7 +46,7 @@ body {
     animation-play-state: paused;
 }
 
-@keyframes row-1__marquee-infinite {
+@keyframes row-3__marquee-infinite {
     0% {
         transform: translateX(0%);
     }
@@ -55,24 +55,82 @@ body {
     }
 }
 
+
 @media screen and (max-width: 1600px) {
     .row-3__wrapper {
         height: 170px;
     }
+}
+
+ @media screen and (max-width: 1440px) {
+    .row-3__wrapper {
+        height: 130px;
+    }
 
     .row-3__marquee-infinite img {
-        /* width: 80%; */
-        height: 75%;
+        height: 50%;
     }
 
     .row-3__marquee-infinite div {
         display: flex;
-        width: 200%;
-        animation: marquee-infinite 10s linear infinite;
+        width: 350%;
     }
 
     .row-3__marquee-infinite span {
         width: 65%;
     }
+} 
 
-}
+
+@media screen and (max-width: 1024px) {
+    .row-3__wrapper {
+        height: 100px;
+    }
+
+    .row-3__marquee-infinite img {
+        height: 35%;
+    }
+
+    .row-3__marquee-infinite div {
+        display: flex;
+        width: 320%;
+    }
+} 
+
+@media screen and (max-width: 768px) {
+    .row-3__wrapper {
+        height: 80px;
+    }
+
+    .row-3__marquee-infinite img {
+        height: 25%;
+    }
+
+    .row-3__marquee-infinite div {
+        display: flex;
+        width: 320%;
+    }
+} 
+
+
+@media screen and (max-width: 560px) {
+    .row-3__wrapper {
+        height: 50px;
+    }
+
+    .row-3__marquee-infinite img {
+        height: 25%;
+    }
+
+    .row-3__marquee-infinite div {
+        display: flex;
+        width: 440%;
+    }
+} 
+
+@media screen and (max-width: 425px) {
+    .row-3__marquee-infinite img {
+        height: 22%;
+    }
+} 
+

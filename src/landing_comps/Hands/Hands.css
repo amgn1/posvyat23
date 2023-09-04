@@ -9,6 +9,8 @@
     background-color: var(--background);
     border-radius: 40px 40px 0 0;
     overflow: hidden;
+
+    background-image: url(../../ui/mock/noise.png);  
 }
 
 @-webkit-keyframes hands  {
@@ -1897,7 +1899,7 @@
 
     
     .hands__wrapper {
-        height: 300px;
+        height: 280px;
         
     }
 

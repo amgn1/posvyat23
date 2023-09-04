@@ -114,9 +114,11 @@
     margin-top: 9%;
 }
 
-/* .btn__registration:hover {
-    scale: 
-} */
+.btn__registration:hover {
+    transition: 0.5s all;
+    background: url('../../ui/mock/btn_outlined_yellow.png');
+    scale: 1.1;
+}
 
 .btn__registration__label {
     text-decoration: none;
@@ -131,7 +133,7 @@
 
 .btn__registration__label:hover {
     /* scale: 1.1; */
-    color: var(--background);  
+    color: var(--background_black);  
     transition: 0.5s all;
 }
 
@@ -206,6 +208,10 @@
     .btn__registration {
         margin-top: 5%;
         scale: 0.8;
+    }
+
+    .btn__registration:hover {
+        scale: 0.85;
     }
     
 }
@@ -292,9 +298,18 @@
         margin-right: 0%;
         justify-content: center;
     }
+
+    .btn__registration:hover {
+        scale: 0.75;
+    }
 }
 
 @media screen and (max-width: 768px){
+
+    .element-about-wrapper {
+        padding: 4% 12% 6%;
+        margin-top: 580px;
+    }
     .about .text-wrapper {
         font-size: 48px;
     }
@@ -307,9 +322,38 @@
     .btn__registration {
         scale: 0.7;
     }
+
+    
+    .btn__registration:hover {
+        scale: 0.75;
+    }
+    .about_photo {
+        width: 45%;
+        left: 65%;
+        top: 54%;
+    }
+
+    .about_photo_2 {
+        width: 45%;
+        right: 65%;
+        top: 62%;
+
+    }
+
+    .sun {
+        top: 58%;
+        width: 50%;
+        left: 26%;
+    }
 }
 
 @media screen and (max-width: 560px){
+
+    .element-about-wrapper {
+        padding: 4% 12% 6%;
+        margin-top: 620px;
+    }
+
     .about .text-wrapper {
         font-size: 28px;
         line-height: 100%;
@@ -324,17 +368,17 @@
     .about_photo {
         width: 45%;
         left: 65%;
-        top: 24%;
+        top: 56%;
     }
 
     .about_photo_2 {
         width: 45%;
         right: 65%;
-        top: 36%;
+        top: 64%;
 
     }
     .sun {
-        top: 28%;
+        top: 60%;
         width: 50%;
         left: 26%;
     }
@@ -343,14 +387,45 @@
         scale: 0.5;
     }
 
+    .btn__registration:hover {
+        scale: 0.55;
+    }
+
     .text_2 {
         margin-top: 70%;
     }
 }
 
 @media screen and (max-width: 420px) {
+
+    .element-about-wrapper {
+        padding: 4% 12% 6%;
+        margin-top: 470px;
+    }
     .text {
         font-size: 12px;
+    }
+
+    .about_photo {
+        width: 45%;
+        left: 65%;
+        top: 55%;
+    }
+
+    .about_photo_2 {
+        width: 45%;
+        right: 65%;
+        top: 62%;
+
+    }
+    .sun {
+        top: 59%;
+        width: 50%;
+        left: 26%;
+    }
+
+    .btn__registration:hover {
+        scale: 0.55;
     }
 }
 

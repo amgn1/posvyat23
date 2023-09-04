@@ -13,7 +13,7 @@ body {
     margin-bottom: 12%;
     
     border-radius: 40px 40px 0 0;
-        background-image: url(../../ui/mock/noise.png);    
+        /* background-image: url(../../ui/mock/noise.png);     */
     /* overflow: hidden; */
 }
 .marquee-infinite {
@@ -27,7 +27,7 @@ body {
     overflow: hidden;
     margin-top: 3%;
     margin-bottom: 6%;
-    background-image: url(../../ui/mock/noise.png);  
+    /* background-image: url(../../ui/mock/noise.png);   */
 }
 
 .marquee-infinite div {
