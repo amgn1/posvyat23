@@ -100,8 +100,13 @@ const TransferProtection = () => {
 };
 
 
+
 const App = () => {
   const [pageStates, setPageStates] = useState({});
+
+  //тест шума
+  
+  //
 
       return (
           

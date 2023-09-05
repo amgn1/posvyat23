@@ -1,8 +1,16 @@
 .theme__wrapper {
-    padding-bottom: 300px;
-    
+    /* padding-bottom: 300px;
+    background-image: url('../../ui/mock/noise.png');
     padding: 6% 0%;
-    height: 1100px;
+    height: 1100px; */
+
+    /* padding-bottom: 300px; */
+    background-image: url(../../ui/mock/noise.png);
+    padding: 6% 0%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    margin-top: -12%;
+    height: 1500px;
 }
 
 .theme__title {
@@ -33,16 +41,20 @@
     background-image: white;
     overflow: hidden;
     transition: 0.5s all;
+    background-size: cover;
     &.suits {
-        background-image: linear-gradient(to bottom, #F6B46D, #FDE4C3);
+        /* background-image: linear-gradient(to bottom, #F6B46D, #FDE4C3); */
+        background-image: url('../../ui/mock/Theme/suit_background.png');
     };
 
     &.atmosphere {
-        background-image: linear-gradient(to bottom, #84B9DB, #DDE4E2);
+        /* background-image: linear-gradient(to bottom, #84B9DB, #DDE4E2); */
+        background-image: url('../../ui/mock/Theme/atmosphere_background.png');
     };
     
     &.games {
-        background-image: linear-gradient(to bottom, #ADC178, #ECE9CB);
+        /* background-image: linear-gradient(to bottom, #ADC178, #ECE9CB); */
+        background-image: url('../../ui/mock/Theme/game_background.png');
     }
 
 }
@@ -248,12 +260,21 @@
     }
 }
 
+@media screen and (max-width: 1800px) {
+    .theme__wrapper {
+        height: 1350px;
+        padding-bottom: 0px;
+    }
+}
+
 
 
 @media screen and (max-width: 1600px) {
 
     .theme__wrapper {
-        height: 900px;
+        padding-top: 15%;
+        height: 1000px;
+        padding-bottom: 0px;
     }
 
     .theme__title {
@@ -306,17 +327,19 @@
 
 @media screen and (max-width: 960px) {
     .theme__wrapper {
-        height: 700px;
+        height: 800px;
+        padding-bottom: 9%;
+        padding-top: 16%;
     }
 
     .theme__title {
         font-size: 70px;
     }
     .theme__cards {
-        margin: 0 4%;
+        margin: 0 8%;
     }
     .theme__cards_descr {
-        margin: 0 4%;
+        margin: 0 8%;
         font-size: 16px;
     }
 
@@ -335,13 +358,14 @@
 @media screen and (max-width: 768px) {
     .theme__wrapper {
         height: 550px;
+        padding-top: 18%;
     }
 
     .theme__title {
         font-size: 50px;
     }
     .theme__card {
-        height: 210px;
+        height: 200px;
         border-radius: 30px;
     }
 
@@ -353,8 +377,12 @@
     .theme__card_descr {
         font-size: 12px;
     }
+    .theme__cards {
+        margin: 0 6%;
+    }
 
     .theme__cards_descr {
+        margin: 0 6%;
         gap: 26px;
     }
     
@@ -363,8 +391,11 @@
 @media screen and (max-width: 560px) {
 
     .theme__wrapper {
-        height: 400px;
-        margin-top: 100px;
+        height: 500px;
+        margin-top: 18%;
+        padding-top: 30%;
+        margin-top: -13%;
+        padding-bottom: 0px;
     }
 
     .theme__title {
@@ -374,6 +405,7 @@
     .theme__card_title {
         font-size: 16px;
         text-align: center;
+        padding: 0;
     }
     .theme__card {
         height: 160px;
@@ -381,12 +413,19 @@
     }
 
     .theme__cards {
+        margin: 0 3%;
         gap: 15px;
     }
 
     .theme__cards_descr {
         gap: 15px;
+        margin: 0 3%;
     }
+
+    .theme__card_descr {
+        font-size: 10px;
+    }
+
 
 
 }

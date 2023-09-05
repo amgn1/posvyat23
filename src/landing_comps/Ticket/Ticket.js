@@ -1,5 +1,4 @@
 import React, {useRef, useCallback} from 'react';
-import ticket from '../../ui/ticket/ticket2.png';
 import ticket_part1 from '../../ui/ticket/ticket_part1.png';
 import ticket_part2 from '../../ui/ticket/ticket_part2.png';
 import dash_line from '../../ui/ticket/dash-line.png';
@@ -74,7 +73,7 @@ function Ticket() {
                 Смена волны продаж осуществляется по времени.</p>
 
                 <button className="ticket_btn" >
-                    <a href="/register" className="ticket_btn-label">Расселение</a>
+                    <a href="/resettlement" className="ticket_btn-label">Расселение</a>
                 </button>
             </div>
 
@@ -84,37 +83,25 @@ function Ticket() {
                 <br /> <br />
                 Смена волны продаж осуществляется по времени.</p>
                 <button className="ticket-mini_btn" >
-                    <a href="/register" className="ticket_btn-label">Расселение</a>
+                    <a href="/resettlement" className="ticket_btn-label">Расселение</a>
                 </button>
 
             </div>
 
 
             <div className="footer_red">
-                <div className='footer__icon_vk'>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></a>
-                </div>
+                <a href="https://vk.com/miemposvyat" className='footer__icon_vk'></a>
 
-                <div className='footer__icon_tg'>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" ></a>
-                </div>
+                <a href="https://t.me/miemposvyat" className='footer__icon_tg'></a>
 
             </div>
 
 
             <div className="footer_share">
-                <div className='share_vk'>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></a>
-                </div>
-
-                <div className='share_tg'>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" ></a>
-                </div>
+                <a href="https://vk.com/miemposvyat" className='share_vk'></a>
+                <a href="https://t.me/miemposvyat" className='share_tg' ></a>
 
             </div>
-
-
-            {/* <img src={people} alt="people" className='ticket_img' /> */}
         </div>
     )
 }

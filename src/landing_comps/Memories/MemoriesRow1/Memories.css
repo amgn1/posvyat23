@@ -131,11 +131,19 @@ body {
 
 @media screen and (max-width: 425px) {
 
+    .row-1__marquee-infinite div {
+        width: 500%;
+    }
+
+    .row-1__marquee-infinite span {
+        width: 120%;
+    }
+
     .row-1__wrapper {
-        height: 50px;
+        height: 120px;
     }
     .row-1__marquee-infinite img {
-        height: 22%;
+        height: 50%;
     }
 
 } 

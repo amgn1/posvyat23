@@ -24,6 +24,7 @@
     margin-right: 9.31%;
     padding: 0;
     height: 900px;
+    /* overflow: hidden; */
 }
 
 .main .element-main {
@@ -31,7 +32,8 @@
     display: inline-flex;
     flex-direction: column;
     padding: 0;
-    margin-top: 10%;
+    margin-top: 6%;
+    overflow: hidden;
 }
 
 .main .text-wrapper {
@@ -56,14 +58,14 @@
     align-items:start;
     flex-direction: column;
     width: 1350px;
-    height: 440px;
+    height: 400px;
 }
 
 .main .label {
     text-align: center;
     font-weight: 400;
     color: var(--red_main);
-    margin-top: 6%; 
+    margin-top: 80px; 
     font-size: 318px;
     font-family: "Kyiv Region-Regular";
     line-height: 100%;
@@ -207,7 +209,7 @@
     margin: 0 auto;
     width: 40px;
     height: 38px;
-    margin-top: 8%;
+    margin-top: 12%;
     margin-bottom: 4%;
 
     animation-name:  infiniteupdown;
@@ -273,7 +275,8 @@
     }
 
     .main .label {
-        height: 230px;
+        height: 180px;
+        margin-top: 60px;
     }
 
     .label__wrapper {
@@ -286,7 +289,7 @@
     }
 
     .main .p {
-        font-size: 20px;
+        font-size: 24px;
         /* color: green; */
         margin-top: 6%;
     }
@@ -302,7 +305,7 @@
     }
 
     .main .next {
-        margin-top: 5%;
+        margin-top: 10%;
         margin-bottom: 2%;
     }
 
@@ -312,7 +315,7 @@
 @media screen and (max-width: 1280px) {
 
     .label__wrapper {
-        scale: 0.5;
+        scale: 0.55;
         height: 440px;
     }
 
@@ -481,17 +484,23 @@
 }
 
 @media screen and (max-width: 560px){
+    .main .element-main {
+        margin-top: -20%;
+    }
     .btn__registration_white {
-        top: 55%;
+        top: 45%;
         right: -50px;
+    }
+
+    .sun_yellow {
+        display: flex;
+        bottom: -45%;
+        width: 550px;
     }
 }
 
 
 @media screen and (max-width: 425px) {
-    /* .main .element-main {
-        height: 300px;
-    } */
 
     .main .element-main {
         margin-top: -30%;
@@ -506,7 +515,7 @@
 
     .label__wrapper {
         position: relative;
-        scale: 0.2;
+        scale: 0.21;
     }
 
     .main .p {
@@ -522,12 +531,12 @@
 
     .sun_yellow {
         display: flex;
-        bottom: -30%;
-        width: 320px;
+        bottom: -40%;
+        width: 380px;
     }
 
     .btn__registration_white {
-        scale: 0.4;
+        scale: 0.42;
         position: absolute;
         top: 58%;
         right: -17%;

@@ -70,6 +70,31 @@ function Expectations() {
 
             </div>
 
+            <div className="expectations__cards__container">
+                <div className="expectations_card welcome wow fadeIn">
+                    <Welcome/>
+                </div>
+
+                <div className="expectations_card main-program wow fadeIn">
+                    <MainProgram/>
+                </div>
+                <div className="expectations_card night-program wow fadeIn">
+                    <NightProgram/>
+                </div>
+                <div className="expectations_card transfer wow fadeIn">
+                    <Transfer/>
+                </div>
+                <div className="expectations_card residence wow fadeIn">
+                    <Residence/>
+                </div>
+                <div className="expectations_card food wow fadeIn">
+                    <Food/>
+                </div>
+            </div>
+
+
+
+
         </div>
     )
 }

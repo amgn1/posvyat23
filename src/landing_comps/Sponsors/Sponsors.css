@@ -2,7 +2,7 @@
 
 body {
     /* background-color: var(--background); */
-    background-image: url(../../ui/mock/noise.png);  
+    /* background-image: url(../../ui/mock/noise.png);   */
     /*  */
 }
 
@@ -21,7 +21,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    background: var(--background);
+    /* background: var(--background); */
     
     width: 100%;
     overflow: hidden;
@@ -34,7 +34,8 @@ body {
     display: flex;
     width: 300%;
     animation: marquee-infinite 10s linear infinite;
-    background-image: url(../../ui/mock/noise.png);  
+    /* background-image: url(../../ui/mock/noise.png);   */
+   
 }
 
 .marquee-infinite span {
