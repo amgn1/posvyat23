@@ -28,7 +28,7 @@ export const Form_aggr = () => {
         event.preventDefault(); 
 
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://127.0.0.1:8000/api/v1/registration/'); 
+        xhr.open('POST', 'https://posvyatmiem.ru/api/v1/registration/'); 
 
         xhr.onload = () => {
             if (xhr.status === 201) {
@@ -232,7 +232,7 @@ export const Form_aggr = () => {
                     </Form.Group>
 
                     <Form.Group as={Col} lg={4} xs={12} className='form_component'>
-                        <Form.Label className="form_label">Ссылка на TG</Form.Label>
+                        <Form.Label className="form_label">Никнейм TG</Form.Label>
                         <Form.Control 
                             
                             placeholder="@student" 
@@ -311,8 +311,10 @@ export const Form_aggr = () => {
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
+                            <option>6</option>
                             <option>1 (магистратура)</option>
                             <option>2 (магистратура)</option>
+                            <option>Не студент</option>
                         </Form.Select>
                         {getFieldErrorMessage('year')}
                     </Form.Group>

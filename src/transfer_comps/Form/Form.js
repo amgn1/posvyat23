@@ -28,7 +28,7 @@ export const Form_aggr = () => {
     const handleSubmit = (event) => {
         event.preventDefault(); 
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://127.0.0.1:8000/api/v1/transfer/'); 
+        xhr.open('POST', 'https://posvyatmiem.ru/api/v1/transfer/'); 
         xhr.onload = () => {
             if (xhr.status === 201) {
                 setFormData({});
