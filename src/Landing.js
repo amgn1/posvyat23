@@ -24,6 +24,10 @@ import HandsDark from "./landing_comps/HandsDark/HandsDark";
 
 export const LandingPage = () => {
 
+    useEffect(() => {
+        document.title = 'О нас';
+      }, []);
+
 
     return (
         <>

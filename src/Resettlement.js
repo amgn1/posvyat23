@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Resettlement.css";
 import { Container } from "react-bootstrap";
 // import { Label } from "./resettlement_comps/Label/Label";
 // import { Form_aggr } from "./resettlement_comps/Form/Form";
 
 export const ResettlementPage = () => {
+
+    useEffect(() => {
+        document.title = 'Расселение';
+      }, []);
+
     return (
         <Container fluid className="main-container-resettlement mt-auto">
             {/* <Label />
