@@ -18,7 +18,7 @@ export const Main = () => {
                 <Container className="element-main">
                     {/* <h4 class="wow slideInLeft white" data-wow-duration="4s" data-wow-delay="5s">тест текст</h4> */}
                    
-                    <div className="text-wrapper">30 сентября – 1 октября</div>
+                    <div className="text-wrapper ">30 сентября – 1 октября</div>
                     <div className="label__wrapper">
                         <div className="label">
                               {/* ПОСВЯТ */}

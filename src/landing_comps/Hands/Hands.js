@@ -13,7 +13,7 @@ function Hands() {
 
             <div className="hands-info_block wow fadeIn animated">
                 <p className='hands-info_main wow animated'>даты</p>
-                <p className='clarifications animated'>30 сентября 1 октября</p>
+                <p className='clarifications animated line_break'>30 сентября 1 октября</p>
                 <p className='hands-info_main wow animated' >место проведения:</p>
                 <p className='clarifications animated'>«Лесной городок»</p>
                 <div className="hands_btn" data-wow-delay="1s">

@@ -48,9 +48,9 @@
 
     /* transition: 0.5s all; */
 
-    -webkit-animation: hands_btn 7s linear infinite;
-    -moz-animation: hands_btn 7s linear infinite;
-    animation: hands_btn 7s linear infinite;
+    -webkit-animation: hands_btn 5s linear infinite;
+    -moz-animation: hands_btn 5s linear infinite;
+    animation: hands_btn 5s linear infinite;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -69,6 +69,7 @@
     background-image: url('../../ui/mock/btn_outline_white_fill.png');
     color: var(--background);
     transition: 0.5s all;
+    scale: 1.01;
 }
 
 
@@ -131,6 +132,12 @@
     text-align: center;
 }
 
+@media screen and (min-width: 1600px){
+    .line_break{
+        width: 400px;
+    }
+}
+
 @media screen and (min-width: 1800px) {
 
     .hands__wrapper {
@@ -184,6 +191,8 @@
 
 @media screen and (max-width: 1600px) {
 
+
+
     .hand_right_dark {
         right: -240%;
         scale: 2.2;
@@ -202,6 +211,10 @@
         /* margin-left: -20%; */
     }
 
+    .line_break{
+        width: 400px;
+    }
+
     .hands-info_main {
         scale: 0.7;
         line-height: 70%;
@@ -210,6 +223,11 @@
 
     .hands_btn {
         scale: 0.7;
+    }
+
+    .hands_btn:hover {
+        scale: 0.75;
+        transition: 0.5s all;
     }
     .hands__wrapper {
         height: 750px;
@@ -236,6 +254,11 @@
 
     .hands_btn {
         scale: 0.6;
+    }
+
+    .hands_btn:hover {
+        scale: 0.65;
+        transition: 0.5s all;
     }
 
     .hands-info_main {
@@ -281,6 +304,11 @@
 
     .hands_btn {
         scale: 0.6;
+    }
+
+    .hands_btn:hover {
+        scale: 0.65;
+        transition: 0.5s all;
     }
 
     .hands-info_main {
@@ -360,6 +388,11 @@
         scale: 0.5;
     }
 
+    .hands_btn:hover {
+        scale: 0.55;
+        transition: 0.5s all;
+    }
+
     .hands-info_main {
         scale: 0.5;
         line-height: 100%;
@@ -432,6 +465,11 @@
         scale: 0.4;
     }
 
+    .hands_btn:hover {
+        scale: 0.45;
+        transition: 0.5s all;
+    }
+
     .hands-info_main {
         scale: 0.3;
         line-height: 100%;
@@ -479,6 +517,10 @@
 
 
 @media screen and (max-width: 560px) {
+
+    .line_break{
+        width: 230px;
+    }
     
     .hand_right_dark {
         top: 40%;
@@ -506,6 +548,11 @@
     .hands_btn {
         scale: 0.3;
         margin-bottom: 40px;
+    }
+
+    .hands_btn:hover {
+        scale: 0.35;
+        transition: 0.5s all;
     }
 
     .hands-info_main {
@@ -551,6 +598,11 @@
     .hands_btn {
         scale: 0.3;
         margin-bottom: 40px;
+    }
+
+    .hands_btn:hover {
+        scale: 0.35;
+        transition: 0.5s all;
     }
 
     .hands-info_main {
