@@ -11,7 +11,7 @@ export const Locked = () => {
                 <Container className="text-wrapper" fluid>
                     Скоро
                 </Container>
-                <Container className='py-5 d-flex align-middle justify-content-center' fluid >
+                <Container className='py-5 my-5 d-flex align-middle justify-content-center' fluid >
                 <button onClick={event =>  window.location.href='/'} className="mb-2 form_btn__transfer_white_popup"  data-wow-duration="2s">
                     <span className="btn_label">
                         Вернуться на главную
