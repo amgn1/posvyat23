@@ -106,7 +106,7 @@ export const Form_aggr = () => {
     };
 
     const getFieldClassName = (fieldName) => {
-        if ((fieldName == 'transfer') || (fieldName == 'sex') || fieldName == 'year') {
+        if ((fieldName === 'transfer') || (fieldName === 'sex') || fieldName === 'year') {
             return classnames('form-text-wrapper form-select-frame', {
                 'is-invalid': errors.hasOwnProperty(fieldName)
             }); 
@@ -201,7 +201,7 @@ export const Form_aggr = () => {
                             type="text" 
                             name='vkurl'
                             id='vkurl'
-                            placeholder="vk.com/ivan1488" 
+                            placeholder="vk.com/ivan" 
                             className={getFieldClassName('vkurl')}
                             value={formData.vkurl || ''}
                             onChange={handleInputChange}
@@ -234,7 +234,7 @@ export const Form_aggr = () => {
                             type="phone" 
                             name='phone' 
                             id='phone'
-                            placeholder="+7 (900) 777-14-88" 
+                            placeholder="+7 (999) 999-99-99" 
                             className={getFieldClassName('phone')}
                             value={formData.phone || ''}
                             onChange={handleInputChange}

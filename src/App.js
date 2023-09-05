@@ -8,6 +8,7 @@ import { LandingPage } from './Landing';
 import { TransferPage } from './Transfer';
 import { ResettlementPage } from './Resettlement';
 import { Loading } from './loading/Loading';
+import { Locked } from './locked/Locked';
 
 const RegisterProtection = () => {
   const [pageStates, setPageStates] = useState({});
@@ -36,7 +37,7 @@ const RegisterProtection = () => {
     return <Loading />;
   }
 
-  return pageStates.registration ? <Outlet/> : <Navigate to="/" />
+  return pageStates.registration ? <Outlet/> : <Locked/>
 };
 
 const ResettlementProtection = () => {
@@ -66,7 +67,7 @@ const ResettlementProtection = () => {
     return <Loading />;
   }
 
-  return pageStates.resettlement ? <Outlet/> : <Navigate to="/" />
+  return pageStates.resettlement ? <Outlet/> : <Locked/>
 };
 
 const TransferProtection = () => {
@@ -96,7 +97,7 @@ const TransferProtection = () => {
     return <Loading />;
   }
 
-  return pageStates.transfer ? <Outlet/> : <Navigate to="/" />
+  return pageStates.transfer ? <Outlet/> : <Locked/>
 };
 
 

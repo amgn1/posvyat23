@@ -23,7 +23,7 @@ body {
 .row-1__marquee-infinite div {
     display: flex;
     width: 300%;
-    animation: marquee-infinite 10s linear infinite;
+    animation: marquee-infinite 20s linear infinite;
 }
 
 .row-1__marquee-infinite span {

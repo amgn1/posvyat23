@@ -1,8 +1,8 @@
 
-body {
-    /* background-color: var(--background);
-    background-image: url('../../../ui/mock/noise.png'); */
-}
+/* body {
+    background-color: var(--background);
+    background-image: url('../../../ui/mock/noise.png');
+} */
 
 .row-2__wrapper {
     background-color: var(--background);
@@ -28,7 +28,7 @@ body {
 .row-2__marquee-infinite div {
     display: flex;
     width: 200%;
-    animation: marquee-infinite 12s linear infinite;
+    animation: marquee-infinite 24s linear infinite;
     margin-top: 26px;
 }
 

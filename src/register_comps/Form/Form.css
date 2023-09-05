@@ -15,20 +15,84 @@
     padding: 24px 40px;
     position: relative;
     width: 100%;
+    color: whitesmoke;
     background-color: transparent;
 }
 
-.form-select-frame {
-    border: 3px solid;
-    border-color: #aaaaaa;
-    border-radius: 30px;
-    display: flex;
-    overflow: hidden;
-    padding: 24px 40px;
-    position: relative;
-    width: 100%;
-    background-color: transparent;
+.form-control::placeholder { 
+    color: #878787!important;;
+    opacity: 1; 
 }
+
+.form-control:-ms-input-placeholder {
+    color: #878787!important;;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #878787!important;;
+}
+
+.form-select::defaultValue {
+    color: #878787!important;
+}
+
+.css-13cymwt-control {
+    border: 3px solid!important;
+    border-color: #aaaaaa!important;
+    border-radius: 30px!important;
+    display: flex!important;
+    overflow: hidden!important;
+    padding: 18px 40px!important;
+    position: relative;
+    width: 100%!important;
+    background-color: transparent!important;
+}
+
+.css-t3ipsp-control {
+    border-color: #f6b460!important;
+    padding: 18px 40px!important;
+    background-color: transparent!important;
+    border-left-color: #f6b460!important;
+    color: #f6b460!important;
+    border-right-color: #f6b460!important;
+    border-top-color: #f6b460!important;
+    border-bottom-color: #f6b460!important;
+    /* color: whitesmoke!important; */
+    box-shadow: 0 0 0 2px rgba(246, 180, 96, 0.6)!important;
+    border: 3px solid!important;
+    border-radius: 30px!important;
+    width: 100%!important;
+    display: flex!important;
+    overflow: hidden!important;
+}
+
+.css-t3ipsp-control:focus {
+    border-color: #f6b460!important;
+    padding: 18px 40px!important;
+    background-color: transparent!important;
+    border-left-color: #f6b460!important;
+    border-right-color: #f6b460!important;
+    border-top-color: #f6b460!important;
+    border-bottom-color: #f6b460!important;
+}
+
+.css-1dimb5e-singleValue {
+    color: whitesmoke!important;
+}
+
+.css-1nmdiq5-menu {
+    border-color: #f6b460!important;
+    box-shadow: 0 0 0 2px rgba(246, 180, 96, 0.6)!important;
+    border: 3px solid!important;
+    color: #1b1818;
+    border-radius: 30px!important;
+    overflow: hidden;
+    padding: 2px 2px;
+    background-color: transparent;
+    background-image: url('../../ui/mock/noise.png');
+}
+
+
 
 .form-frame:focus {
     border-color: rgba(246, 180, 96, 1);
@@ -37,15 +101,15 @@
     box-shadow: 0 0 0 2px rgba(246, 180, 96, 0.6);
 }
 
-.form-select-frame:focus {
+/* .form-select-frame:focus {
     border-color: rgba(246, 180, 96, 1);
     box-shadow: 0 0 0 2px rgba(246, 180, 96, 0.6);
     background-color: transparent;
-}
+} */
 
 
 .form-text-wrapper {
-    color: #878787;
+    color: whitesmoke;
     font-family: "Object Sans-Regular", Helvetica;
     font-size: calc(16px + (24 - 16) * ((100vw - 390px) / (1728 - 390)));
     font-weight: 400;

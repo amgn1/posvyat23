@@ -17,9 +17,9 @@
     z-index: 11;
 }
 
-.expectations__cards__container{
+/* .expectations__cards__container{
 
-}
+} */
 
 .expectations_card {
     margin: 0 auto;
@@ -272,65 +272,39 @@
 
     .welcome {
         top: 0%;
-        right: -138%;
-    }
-
-    .card-welcome_img {
-        display: none;
+        right: -118%;
     }
 
     .exp_btn {
         display: none;
     }
 
-    .card_main {
-        
-    }
-
 
     .main-program {
         top: 18%;
-        left: -152%;
+        left: -118%;
     }
 
-    .card-main_program_img {
-        display: none;
-    }
 
     .night-program {
         top: 36%;
-        right: -154%;
+        right: -118%;
     }
 
-    .card-night_program_img {
-        display: none;
-    }
-
-    .transfer{
-        top: 54%;
-        right: -136%;
-    }
-
-    .card-transfer_img {
-        display: none;
-    }
 
     .residence {
         top: 72%;
-        left: -140%;
+        left: -118%;
     }
-
-    .card-residence_img {
-        display: none;
+    
+    .transfer{
+        top: 54%;
+        right: -118%;
     }
 
     .food {
         top: 90%;
-        right: -146%;
-    }
-
-    .card-food_img {
-        display: none;
+        right: -118%;
     }
 
     .expectations__wrapper {

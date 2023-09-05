@@ -1,4 +1,4 @@
-.form_container {
+/* .form_container {
     padding-top: 4.839898vh;
     padding-left: 16.145833vw;
     padding-right: 16.145833vw;
@@ -15,7 +15,25 @@
     padding: 24px 40px;
     position: relative;
     width: 100%;
+    color: whitesmoke;
     background-color: transparent;
+}
+
+.form-control::placeholder { 
+    color: #878787!important;;
+    opacity: 1; 
+}
+
+.form-control:-ms-input-placeholder {
+    color: #878787!important;;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #878787!important;;
+}
+
+.form-select::defaultValue {
+    color: #878787!important;
 }
 
 .form-select-frame {
@@ -45,7 +63,7 @@
 
 
 .form-text-wrapper {
-    color: #878787;
+    color: whitesmoke;
     font-family: "Object Sans-Regular", Helvetica;
     font-size: calc(16px + (24 - 16) * ((100vw - 390px) / (1728 - 390)));
     font-weight: 400;
@@ -69,7 +87,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+} */
 
   @media screen and (min-width: 600px) {
     .form_label {

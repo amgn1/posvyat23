@@ -8,6 +8,7 @@ import classnames from 'classnames';
 import { Popup_inner } from '../Popup/Popup';
 import sun from '../../ui/mock/sun (3).png'
 import WOW from 'wowjs';
+import Select from "react-select";
 
 export const Form_aggr = () => {
     const [formData, setFormData] = useState({});
@@ -16,6 +17,9 @@ export const Form_aggr = () => {
     
     const handleInputChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
+    };
+    const handleSelectChange = (value, action) => {
+        setFormData({ ...formData, [action.name]: value });
     };
 
     document.addEventListener("DOMContentLoaded", function(){
@@ -26,6 +30,7 @@ export const Form_aggr = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
+        console.log(event.target)
 
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://posvyatmiem.ru/api/v1/registration/'); 
@@ -60,6 +65,7 @@ export const Form_aggr = () => {
       
           
         const formDataToSend = new FormData(event.target);
+        console.log(formDataToSend)
         xhr.send(formDataToSend);
         
     };
@@ -94,6 +100,8 @@ export const Form_aggr = () => {
                 return errorArray[0].replace('This field may not be blank.', 'Это поле не должно быть пустым');
             } else if (errorArray[0] === 'Date has wrong format. Use one of these formats instead: YYYY-MM-DD.') {
                 return 'Неверный формат даты. Используйте, например, дд.мм.гггг';
+            } else if (errorArray[0] === "\"\" is not a valid choice."){
+                return errorArray[0].replace('\"\" is not a valid choice.', 'Это поле не должно быть пустым');
             }
         }
 
@@ -101,10 +109,17 @@ export const Form_aggr = () => {
     };
 
     const getFieldClassName = (fieldName) => {
-        if ((fieldName == 'transfer') || (fieldName == 'sex') || fieldName == 'year') {
-            return classnames('form-text-wrapper form-select-frame', {
-                'is-invalid': errors.hasOwnProperty(fieldName)
-            }); 
+        if ((fieldName === 'transfer') || (fieldName === 'sex') || fieldName === 'year') {
+            if (errors.hasOwnProperty(fieldName)) {
+                return classnames('form-text-wrapper form-select-frame invalid', {
+                    'is-invalid': errors.hasOwnProperty(fieldName)
+                }); 
+            } else {
+                return classnames('form-text-wrapper form-select-frame', {
+                    'is-invalid': errors.hasOwnProperty(fieldName)
+                }); 
+            }
+            
         }
         return classnames('form-text-wrapper form-frame', {
             'is-invalid': errors.hasOwnProperty(fieldName)
@@ -113,6 +128,8 @@ export const Form_aggr = () => {
 
     const getFieldErrorMessage = (fieldName) => {
         if (errors.hasOwnProperty(fieldName)) {
+            console.log(fieldName)
+            console.log(errors[fieldName])
             return <div className="invalid-feedback">{errors[fieldName]}</div>;
         }
         return null;
@@ -195,7 +212,7 @@ export const Form_aggr = () => {
                             type="phone" 
                             name='phone' 
                             id='phone'
-                            placeholder="+7 (900) 777-14-88" 
+                            placeholder="+7 (999) 99-99-99" 
                             className={getFieldClassName('phone')}
                             value={formData.phone || ''}
                             onChange={handleInputChange}
@@ -227,7 +244,7 @@ export const Form_aggr = () => {
                             type="text" 
                             name='vkurl'
                             id='vkurl'
-                            placeholder="vk.com/ivan1488" 
+                            placeholder="vk.com/ivan" 
                             className={getFieldClassName('vkurl')}
                             value={formData.vkurl || ''}
                             onChange={handleInputChange}
@@ -252,18 +269,23 @@ export const Form_aggr = () => {
 
                     <Form.Group as={Col} lg={3} xs={12} className='form_component'>
                         <Form.Label className="form_label">Пол</Form.Label>
-                        <Form.Select 
+                        <Select 
                             
-                            defaultValue="Мужской" 
+                            placeholder="Пол" 
                             name='sex'
                             id='sex'
                             className={getFieldClassName('sex')}
                             value={formData.sex || ''}
-                            onChange={handleInputChange}
-                        >
-                            <option>Мужской</option>
-                            <option>Женский</option>
-                        </Form.Select>
+                            onChange={handleSelectChange}
+                            options={[
+                                {value: 'Мужской', label: 'Мужской'},
+                                {value: 'Женский', label: 'Женский'},
+                                
+                            ]}
+                        />
+                        <Container>
+                        {getFieldErrorMessage('sex')}
+                        </Container>
                         {getFieldErrorMessage('sex')}
                     </Form.Group>
                 </Row>
@@ -301,25 +323,25 @@ export const Form_aggr = () => {
 
                     <Form.Group as={Col} lg={3} xs={12} className='form_component'>
                         <Form.Label className="form_label">Курс</Form.Label>
-                        <Form.Select 
-                            
-                            defaultValue="1" 
+                        <Select
+                            styles={{backgroundColor: 'transparent'}}
+                            placeholder="Курс" 
                             name='year'
                             id='year'
                             className={getFieldClassName('year')}
                             value={formData.year || ''}
-                            onChange={handleInputChange}
-                        >
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>1 (магистратура)</option>
-                            <option>2 (магистратура)</option>
-                            <option>Не студент</option>
-                        </Form.Select>
+                            onChange={handleSelectChange}
+                            options={[
+                                {value: '1', label: '1 курс'},
+                                {value: '2', label: '2 курс'},
+                                {value: '3', label: '3 курс'},
+                                {value: '4', label: '4 курс'},
+                                {value: '5', label: '5 курс'},
+                                {value: '6', label: '6 курс'},
+                                {value: '1 (маг)', label: '1 курс (маг.)'},
+                                {value: '2 (маг)', label: '2 курс (маг.)'},
+                            ]}
+                        />
                         {getFieldErrorMessage('year')}
                     </Form.Group>
                 </Row>
@@ -359,29 +381,31 @@ export const Form_aggr = () => {
                 <Row>
                     <Form.Group as={Col} lg={6} xs={12} className="mb-3 form_component">
                         <Form.Label className="form_label">Нужен ли тебе трансфер?</Form.Label>
-                        <Form.Select
+                        <Select
                             
-                            defaultValue="Да, от Одинцово и обратно" 
+                            placeholder="Выберите вариант трансфера" 
                             name='transfer' 
                             id='transfer'
                             className={getFieldClassName('transfer')}
                             value={formData.transfer || ''}
-                            onChange={handleInputChange}
+                            onChange={handleSelectChange}
+                            options={[
+                                {value: 'Да, от Одинцово', label: 'Да, от Одинцово'},
+                                {value: 'Да, от Парка Победы', label: 'Да, от Парка Победы'},
+                                {value: 'Не нужен', label: 'Не нужен'},
+                            ]}
 
-                        >
-                            <option className='form-option' >Да, от Одинцово и обратно</option>
-                            <option>Да, от Парка Победы</option>
-                            <option>Не нужен</option>
-                        </Form.Select>
+                        />
                         {getFieldErrorMessage('transfer')}
                     </Form.Group>
                 </Row>
                 
                 <Row>
                     <Form.Group as={Col} lg={9} xs={12} className="mb-3 form_component">
-                        <Form.Label className="form_label" lang='ru'>Особенности здоровья (при наличии)</Form.Label>
+                        <Form.Label className="form_label" lang='ru'>Особенности здоровья</Form.Label>
                         <Form.Control 
                             
+                            placeholder='При наличии'
                             type="text" 
                             name='health' 
                             id='health'

@@ -1,5 +1,5 @@
 import React from 'react';
-import main_program from '../../ui/cards/main_program.png';
+import main_program from '../../ui/cards/main_program (2).png';
 import "./MainProgram.css";
 
 function MainProgram() {

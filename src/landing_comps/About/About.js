@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import about_photo_1 from '../../ui/mock/about_photo_1.png';
 import sun_red from '../../ui/mock/sun_red.png';
-import about_photo_2 from '../../ui/mock/about_photo_2.png';
+import about_photo_2 from '../../ui/mock/about-photo-2.png';
 
 import sun from '../../ui/mock/sun_yellow.png';
 
@@ -23,7 +23,7 @@ export const About = () => {
                 <img src={about_photo_2} alt="photo" className="about_photo_2" />
 
                 <div className="text__wrapper text_2 wow fadeIn" data-wow-duration="3s">
-                    <p className="text t_2 ">B Telegram-канале Посвята можно посмотреть на подготовку общины к мероприятию, а вся важная информация собрана в группе VK. Пропустить Жатву — значит упустить самое необычное и яркое событие твоей юности.  <br /> <br />
+                    <p className="text t_2 ">B <a href="https://t.me/miemposvyat">Telegram-канале</a> Посвята можно посмотреть на подготовку общины к мероприятию, а вся важная информация собрана в <a href="https://vk.com/miemposvyat">сообществе VK</a>. Пропустить Жатву — значит упустить самое необычное и яркое событие твоей юности.  <br /> <br />
 
                     Стань участником праздника и эффектно вступи в студенческую жизнь!</p>
                 </div>

@@ -70,8 +70,8 @@ function Theme() {
                 </div>
 
                 <div className="">
-                    <h3 className="theme__card_title">Игры</h3>
-                    <div className="theme__card_descr">Увлекательные игры будут 
+                    <h3 className="theme__card_title">Активности</h3>
+                    <div className="theme__card_descr">Увлекательные активности будут 
                                                        по душе каждому посетителю, 
                                                        главное — быть открытым к миру!
                     </div>

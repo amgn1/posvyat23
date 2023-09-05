@@ -70,7 +70,7 @@ function Ticket() {
                 <img src={people} alt="people" className='people' />
                 <p className='ticket_text'>Билеты на Посвят продаются в несколько волн — с новой волной цена увеличивается.
                 <br /> <br />
-                Смена волны продаж осуществляется по времени.</p>
+                Смена волны продаж осуществляется по проданному количеству билетов.</p>
 
                 <button className="ticket_btn" >
                     <a href="/register" className="ticket_btn-label">регистрация</a>

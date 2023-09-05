@@ -2,7 +2,7 @@
 import React from 'react';
 import "./Popup.css";
 import { Container } from 'react-bootstrap';
-import photo1 from '../../ui/mock/animated.png'
+import photo1 from '../../ui/mock/animated (1).png'
 
 
 export const Popup_inner = () => {
