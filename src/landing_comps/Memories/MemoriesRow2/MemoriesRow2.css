@@ -182,7 +182,7 @@ body {
     }   
     
     .row-2__marquee-infinite span {
-        width: 80%;
+        width: 82%;
     }
     
 
@@ -203,16 +203,20 @@ body {
 
 @media screen and (max-width: 425px) {
     .row-2__wrapper {
-        height: 100px;
+        height: 230px;
     }
 
     .row-2__marquee-infinite img {
-        height: 20%;
+        height: 45%;
     }
 
     .row-2__marquee-infinite div {
         display: flex;
-        width: 340%;
+        width: 680%;
+    }
+
+    .row-2__marquee-infinite {
+        height: 230px;
     }
 
 } 

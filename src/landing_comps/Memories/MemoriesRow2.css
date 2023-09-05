@@ -75,23 +75,32 @@ body {
 
 
 @media screen and (max-width: 560px) {
-    .row-1__wrapper {
+    .row-2__wrapper {
         height: 50px;
     }
 
-    .row-1__marquee-infinite img {
+    .row-2__marquee-infinite img {
         height: 25%;
     }
 
-    .row-1__marquee-infinite div {
+    .row-2__marquee-infinite div {
         display: flex;
         width: 440%;
     }
 } 
 
 @media screen and (max-width: 425px) {
-    .row-1__marquee-infinite img {
-        height: 22%;
+    .row-2__marquee-infinite img {
+        height: 40%;
+    }
+    .row-2__wrapper {
+        height: 200px;
+    }
+
+
+    .row-2__marquee-infinite div {
+        display: flex;
+        width: 380%;
     }
 } 
 

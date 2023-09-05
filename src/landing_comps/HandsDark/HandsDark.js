@@ -1,8 +1,5 @@
 import React from 'react';
 
-import white_left_hand from '../../ui/Hands/white_left_hand.png';
-import white_right_hand from '../../ui/Hands/white_right_hand.png';
-
 import './HandsDark.css';
 
 
@@ -18,9 +15,6 @@ function HandsDark() {
                 <div className="btn-dark hands_btn">
                     регистрация
                 </div>
-
-                <img src={white_right_hand} alt="right hand" className='hands hand_right' />
-                <img src={white_left_hand} alt="" className='hands hand_left'/>
             </div>
 
           

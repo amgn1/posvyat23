@@ -36,8 +36,9 @@ export const LandingPage = () => {
             <Memories/>
             <MemoriesRow2/>
             <MemoriesRow3/>
+            {/* <BackToTopBtn/> */}
+
             <Ticket/>
-            <BackToTopBtn/>
         </>
     );
 };
