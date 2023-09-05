@@ -36,7 +36,6 @@ export const Form_aggr = () => {
                 setErrors({});
                 setShowModal(true);
             } else if (xhr.status === 400) {
-                
                 const response = JSON.parse(xhr.responseText);
                 const errorMessages = {};
         
@@ -102,6 +101,11 @@ export const Form_aggr = () => {
     };
 
     const getFieldClassName = (fieldName) => {
+        if ((fieldName == 'transfer') || (fieldName == 'sex') || fieldName == 'year') {
+            return classnames('form-text-wrapper form-select-frame', {
+                'is-invalid': errors.hasOwnProperty(fieldName)
+            }); 
+        }
         return classnames('form-text-wrapper form-frame', {
             'is-invalid': errors.hasOwnProperty(fieldName)
         });
@@ -366,7 +370,7 @@ export const Form_aggr = () => {
 
                         >
                             <option className='form-option' >Да, от Одинцово и обратно</option>
-                            <option>Да, от Парка Победы и обратно</option>
+                            <option>Да, от Парка Победы</option>
                             <option>Не нужен</option>
                         </Form.Select>
                         {getFieldErrorMessage('transfer')}
@@ -413,7 +417,7 @@ export const Form_aggr = () => {
                     <Popup_inner />
                     <Container fluid className='d-flex align-middle justify-content-center pb-5'>
                         <button onClick={event =>  window.location.href='/'} className="mb-2 form_btn__registration_white_popup"  data-wow-duration="2s">
-                            <span className="btn_label">
+                            <span className="btn_registration_label_popup">
                                 Вернуться на главную
                             </span>
                         </button>

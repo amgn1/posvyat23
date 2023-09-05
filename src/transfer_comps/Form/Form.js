@@ -106,6 +106,11 @@ export const Form_aggr = () => {
     };
 
     const getFieldClassName = (fieldName) => {
+        if ((fieldName == 'transfer') || (fieldName == 'sex') || fieldName == 'year') {
+            return classnames('form-text-wrapper form-select-frame', {
+                'is-invalid': errors.hasOwnProperty(fieldName)
+            }); 
+        }
         return classnames('form-text-wrapper form-frame', {
             'is-invalid': errors.hasOwnProperty(fieldName)
         });
@@ -239,7 +244,7 @@ export const Form_aggr = () => {
                 </Row>
                 
                 <Container fluid className='d-flex align-middle justify-content-center py-5'>
-                    <button type="submit"  className="mb-2 form_btn__registration_white wow fadeIn"  data-wow-duration="2s">
+                    <button type="submit"  className="mb-2 form_btn__transfer_white wow fadeIn"  data-wow-duration="2s">
                         <span className="btn_label">
                             Отправить  
                         </span>
@@ -261,7 +266,7 @@ export const Form_aggr = () => {
                 <Modal.Body className='mx-1 my-1'>
                     <Popup_inner />
                     <Container fluid className='d-flex align-middle justify-content-center pb-5'>
-                        <button onClick={event =>  window.location.href='/'} className="mb-2 form_btn__registration_white_popup"  data-wow-duration="2s">
+                        <button onClick={event =>  window.location.href='/'} className="mb-2 form_btn__transfer_white_popup"  data-wow-duration="2s">
                             <span className="btn_label">
                                 Вернуться на главную
                             </span>

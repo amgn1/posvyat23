@@ -181,7 +181,8 @@
     text-align: center;
     line-height: 32px;
     text-decoration: none;
-    color: var(--background);  
+    color: var(--background);
+    transition: 0.5s all;  
 }
 
 .btn_label:hover {
