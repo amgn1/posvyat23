@@ -73,7 +73,7 @@ function Ticket() {
                 Смена волны продаж осуществляется по времени.</p>
 
                 <button className="ticket_btn" >
-                    <a href="/resettlement" className="ticket_btn-label">Расселение</a>
+                    <a href="/register" className="ticket_btn-label">регистрация</a>
                 </button>
             </div>
 
@@ -83,7 +83,7 @@ function Ticket() {
                 <br /> <br />
                 Смена волны продаж осуществляется по времени.</p>
                 <button className="ticket-mini_btn" >
-                    <a href="/resettlement" className="ticket_btn-label">Расселение</a>
+                    <a href="/register" className="ticket_btn-label">регистрация</a>
                 </button>
 
             </div>
