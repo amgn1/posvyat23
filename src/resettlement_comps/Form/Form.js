@@ -409,7 +409,7 @@ export const Form_aggr = () => {
                     
                 ))}
 
-                {fields.length <= 4 && ( 
+                {fields.length <= 3 && ( 
                     <Row>
                         <Button type="button" as={Col} lg={6} xs={6} onClick={handleAddField} className='add_btn'><Image src={add_button} className='d-block img-fluid'/> Добавить человека</Button>
                     </Row>
