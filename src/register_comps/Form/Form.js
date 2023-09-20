@@ -139,6 +139,52 @@ export const Form_aggr = () => {
         setShowModal(false);
     };
 
+    const colourStyles = {
+        option: styles => ({ ...styles, 
+            backgroundColor: '#1b1818', 
+            color: 'whitesmoke', 
+            backgroundImage: "url(" + "../../ui/mock/noise.png" + ")" ,
+            "&:active": {
+                backgroundColor: "#1b1818",
+                textDecoration: 'solid underline 2px' 
+              },
+            "&:hover": {
+                backgroundColor: "#1b1818",
+                textDecoration: 'solid underline 2px' 
+              }
+        }),
+        menu: styles => ({ ...styles, 
+            borderColor: "#f6b460",
+            backgroundColor: '#1b1818', 
+            backgroundImage: "url(" + "../../ui/mock/noise.png" + ")",
+            boxShadow: '0 0 0 2px #f6b460',
+            border: '3px solid', 
+            color: '#1b1818',
+            borderRadius: '30px',
+            overflow: 'hidden',
+            padding: '2px 2px',
+            
+
+        }),
+        menuList: (base) => ({
+            ...base,
+        
+            "::-webkit-scrollbar": {
+              width: "4px",
+              height: "0px",
+            },
+            "::-webkit-scrollbar-track": {
+              background: "#1b1818"
+            },
+            "::-webkit-scrollbar-thumb": {
+              background: "#888"
+            },
+            "::-webkit-scrollbar-thumb:hover": {
+              background: "#555"
+            }
+          })
+      };
+
     return (
         <Container className="mt-auto pt-5">
             <Form onSubmit={handleSubmit} className='mt-auto pt-auto' >
@@ -270,7 +316,7 @@ export const Form_aggr = () => {
                     <Form.Group as={Col} lg={3} xs={12} className='form_component'>
                         <Form.Label className="form_label">Пол</Form.Label>
                         <Select 
-                            
+                            styles={colourStyles}
                             placeholder="Пол" 
                             name='sex'
                             id='sex'
@@ -324,7 +370,7 @@ export const Form_aggr = () => {
                     <Form.Group as={Col} lg={3} xs={12} className='form_component'>
                         <Form.Label className="form_label">Курс</Form.Label>
                         <Select
-                            styles={{backgroundColor: 'transparent'}}
+                            styles={colourStyles}
                             placeholder="Курс" 
                             name='year'
                             id='year'
@@ -340,6 +386,7 @@ export const Form_aggr = () => {
                                 {value: '6', label: '6 курс'},
                                 {value: '1 (маг)', label: '1 курс (маг.)'},
                                 {value: '2 (маг)', label: '2 курс (маг.)'},
+                                {value: 'Не студент', label: 'Не студент'},
                             ]}
                         />
                         {getFieldErrorMessage('year')}
@@ -382,7 +429,7 @@ export const Form_aggr = () => {
                     <Form.Group as={Col} lg={6} xs={12} className="mb-3 form_component">
                         <Form.Label className="form_label">Нужен ли тебе трансфер?</Form.Label>
                         <Select
-                            
+                            styles={colourStyles}
                             placeholder="Выберите вариант трансфера" 
                             name='transfer' 
                             id='transfer'

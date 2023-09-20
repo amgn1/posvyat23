@@ -1,6 +1,6 @@
 import React, { useState, } from 'react';
 import "./Form.css";
-import { Modal, Container, Image, Alert } from 'react-bootstrap';
+import { Modal, Container, Image, Alert, Button } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -9,36 +9,57 @@ import { Popup_inner } from '../Popup/Popup';
 import sun from '../../ui/mock/sun (3).png'
 import WOW from 'wowjs';
 import Select from "react-select";
+import cls_button from '../../ui/mock/close_btn.png';
+import add_button from '../../ui/mock/add_btn.png';
 
 export const Form_aggr = () => {
     const [formData, setFormData] = useState({});
     const [errors, setErrors] = useState({});
     const [showModal, setShowModal] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
+    const [fields, setFields] = useState([{FIO: '' }]);
+
+    const handleAddField = () => {
+        setFields([...fields, {FIO: '' }]);
+    };
+
+    const handleDeleteField = (index) => {
+        const updatedFields = [...fields];
+        updatedFields.splice(index, 1);
+        setFields(updatedFields);
+    };
+
+    const handleFullNameChange = (index, value) => {
+        const updatedFields = [...fields];
+        updatedFields[index].FIO = value;
+        setFields(updatedFields);
+    };
     
     const handleInputChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
-
     const handleSelectChange = (value, action) => {
         setFormData({ ...formData, [action.name]: value });
     };
 
-    var Odi = [
-        {value: '16:45', label: '16:45'},
-        {value: '17:25', label: '17:25'},
-        {value: '17:45', label: '17:45'},
-        {value: '18:25', label: '18:25'},
-        {value: '18:45', label: '18:45'},
-        {value: '19:25', label: '19:25'},
-    ];
+    // const [people, setPeople] = useState([{ name: "" }]);
 
-    var PP = [
-        {value: '15:15', label: '15:15'},
-        {value: '15:35', label: '15:35'},
-        {value: '15:55', label: '15:55'},
-        {value: '17:35', label: '17:35'},
-    ];
+    // const handleAddPerson = () => {
+    //     setPeople([...people, { name: "" }]);
+    // };
+  
+    // const handleRemovePerson = (index) => {
+    //     const updatedPeople = [...people];
+    //     updatedPeople.splice(index, 1);
+    //     setPeople(updatedPeople);
+    // };
+  
+    // const handleInputChange_custom = (index, e) => {
+    //     const { name, value } = e.target;
+    //     const updatedPeople = [...people];
+    //     updatedPeople[index][name] = value;
+    //     setPeople(updatedPeople);
+    // };
 
     document.addEventListener("DOMContentLoaded", function(){
         new WOW.WOW({
@@ -49,7 +70,7 @@ export const Form_aggr = () => {
     const handleSubmit = (event) => {
         event.preventDefault(); 
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://posvyatmiem.ru/api/v1/transfer/'); 
+        xhr.open('POST', 'https://posvyatmiem.ru/api/v1/resettlement/'); 
         xhr.onload = () => {
             if (xhr.status === 201) {
                 setFormData({});
@@ -82,7 +103,14 @@ export const Form_aggr = () => {
       
           
         const formDataToSend = new FormData(event.target);
-        xhr.send(formDataToSend);
+        
+        let formDataObject = Object.fromEntries(formDataToSend.entries());
+        formDataObject.people_custom = fields.slice(1)
+    
+        // Format the plain form data as JSON
+        let formDataJsonString = JSON.stringify(formDataObject);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(formDataJsonString);
         
     };
 
@@ -90,24 +118,24 @@ export const Form_aggr = () => {
         if (fieldName === 'vkurl') {
             if (errorArray[0] === 'This field may not be blank.') {
                 return errorArray[0].replace('This field may not be blank.', 'Это поле не должно быть пустым');
-            } else if (errorArray[0] === 'transfer with this vkurl already exists.') {
-                return 'Трансфер с таким VK уже существует';
+            } else if (errorArray[0] === 'resettlement with this vkurl already exists.') {
+                return 'Расселение с таким VK уже существует';
             } else if (errorArray[0] === 'Enter a valid URL.') {
                 return 'Введена неверная ссылка'
             }
         } else if (fieldName === 'tgurl') {
             if (errorArray[0] === 'This field may not be blank.') {
                 return errorArray[0].replace('This field may not be blank.', 'Это поле не должно быть пустым');
-            } else if (errorArray[0] === 'transfer with this tgurl already exists.') {
-                return 'Трансфер с таким Telegram уже существует';
+            } else if (errorArray[0] === 'resettlement with this tgurl already exists.') {
+                return 'Расселение с таким Telegram уже существует';
             }  else if (errorArray[0] === 'Enter a valid URL.') {
                 return 'Введена неверная ссылка'
             }
         } else if (fieldName === 'phone') { 
             if (errorArray[0] === 'This field may not be blank.') {
                 return errorArray[0].replace('This field may not be blank.', 'Это поле не должно быть пустым');
-            } else if (errorArray[0] === 'transfer with this phone already exists.') {
-                return 'Трансфер с таким номером телефона уже существует';
+            } else if (errorArray[0] === 'resettlement with this phone already exists.') {
+                return 'Расселение с таким номером телефона уже существует';
             } else if (errorArray[0] === 'The phone number entered is not valid.') {
                 return 'Неправильный номер телефона'
             } 
@@ -127,10 +155,17 @@ export const Form_aggr = () => {
     };
 
     const getFieldClassName = (fieldName) => {
-        if ((fieldName === 'transfer') || (fieldName === 'departure_time') || fieldName === 'year') {
-            return classnames('form-text-wrapper form-select-frame', {
-                'is-invalid': errors.hasOwnProperty(fieldName)
-            }); 
+        if ((fieldName === 'transfer') || (fieldName === 'sex') || fieldName === 'year') {
+            if (errors.hasOwnProperty(fieldName)) {
+                return classnames('form-text-wrapper form-select-frame invalid', {
+                    'is-invalid': errors.hasOwnProperty(fieldName)
+                }); 
+            } else {
+                return classnames('form-text-wrapper form-select-frame', {
+                    'is-invalid': errors.hasOwnProperty(fieldName)
+                }); 
+            }
+            
         }
         return classnames('form-text-wrapper form-frame', {
             'is-invalid': errors.hasOwnProperty(fieldName)
@@ -194,7 +229,7 @@ export const Form_aggr = () => {
               background: "#555"
             }
           })
-      };
+    };
 
     return (
         <Container className="mt-auto pt-5">
@@ -247,21 +282,7 @@ export const Form_aggr = () => {
                 </Row>
 
                 <Row className="mb-5 gy-5">
-                    <Form.Group as={Col} lg={4} xs={12} className='form_component'>
-                        <Form.Label className="form_label">Почта</Form.Label>
-                        <Form.Control 
-                            
-                            type="email" 
-                            name='email'
-                            id='email'
-                            placeholder="posvyat@edu.ru" 
-                            className={getFieldClassName('email')}
-                            value={formData.email || ''}
-                            onChange={handleInputChange}
-                        />
-                        {getFieldErrorMessage('email')}
-                    </Form.Group>
-                    <Form.Group as={Col} lg={4} xs={12} className='form_component'>
+                    <Form.Group as={Col} lg={3} xs={12} className='form_component'>
                         <Form.Label className="form_label">Ссылка на VK</Form.Label>
                         <Form.Control 
                             
@@ -276,8 +297,8 @@ export const Form_aggr = () => {
                         {getFieldErrorMessage('vkurl')}
                     </Form.Group>
 
-                    <Form.Group as={Col} lg={4} xs={12} className='form_component'>
-                        <Form.Label className="form_label">Ссылка на TG</Form.Label>
+                    <Form.Group as={Col} lg={3} xs={12} className='form_component'>
+                        <Form.Label className="form_label">Никнейм TG</Form.Label>
                         <Form.Control 
                             
                             placeholder="@student" 
@@ -290,11 +311,64 @@ export const Form_aggr = () => {
                         />
                         {getFieldErrorMessage('tgurl')}
                     </Form.Group>
+
+                    <Form.Group as={Col} lg={3} xs={12} className='form_component'>
+                        <Form.Label className="form_label">Курс</Form.Label>
+                        <Select
+                            styles={colourStyles}
+                            placeholder="Курс" 
+                            name='year'
+                            id='year'
+                            className={getFieldClassName('year')}
+                            value={formData.year || ''}
+                            onChange={handleSelectChange}
+                            options={[
+                                {value: '1', label: '1 курс'},
+                                {value: '2', label: '2 курс'},
+                                {value: '3', label: '3 курс'},
+                                {value: '4', label: '4 курс'},
+                                {value: '5', label: '5 курс'},
+                                {value: '6', label: '6 курс'},
+                                {value: '1 (маг)', label: '1 курс (маг.)'},
+                                {value: '2 (маг)', label: '2 курс (маг.)'},
+                                {value: 'Не студент', label: 'Не студент'},
+                            ]}
+                        />
+                        {getFieldErrorMessage('year')}
+                    </Form.Group>
+
+                    <Form.Group as={Col} lg={3} xs={12} className='form_component'>
+                        <Form.Label className="form_label">Группа</Form.Label>
+                        <Form.Control 
+                            
+                            placeholder="БИВ230" 
+                            name='group' 
+                            type='text'
+                            id='group'
+                            className={getFieldClassName('group')}
+                            value={formData.group || ''}
+                            onChange={handleInputChange}
+                        />
+                        {getFieldErrorMessage('group')}
+                    </Form.Group>
                 </Row>
 
                 <Row className="mb-5 gy-5">
-                    
-                    <Form.Group as={Col} lg={4} xs={12} className='form_component'>
+                    <Form.Group as={Col} lg={9} xs={12} className='form_component'>
+                        <Form.Label className="form_label">Образовательная программа</Form.Label>
+                        <Form.Control 
+                            
+                            name='program' 
+                            type='text'
+                            id='program'
+                            placeholder="ИВТ (Информатика и вычислительная техника)" 
+                            className={getFieldClassName('program')}
+                            value={formData.program || ''}
+                            onChange={handleInputChange}
+                        />
+                        {getFieldErrorMessage('program')}
+                    </Form.Group>
+                    <Form.Group as={Col} lg={3} xs={12} className='form_component'>
                         <Form.Label className="form_label">Телефон</Form.Label>
                         <Form.Control 
                             
@@ -308,46 +382,45 @@ export const Form_aggr = () => {
                         />
                         {getFieldErrorMessage('phone')}
                     </Form.Group>
-
-                    <Form.Group as={Col} lg={4} xs={12} className="mb-3 form_component">
-                        <Form.Label className="form_label">Откуда?</Form.Label>
-                        <Select
-                            styles={colourStyles}
-                            placeholder="Отправление" 
-                            name='transfer' 
-                            id='transfer'
-                            className={getFieldClassName('transfer')}
-                            value={formData.transfer || ''}
-                            onChange={handleSelectChange}
-                            options={[
-                                {value: 'Одинцово', label: 'Одинцово'},
-                                {value: 'Парк Победы', label: 'Парк Победы'},
-                            ]}
-
-                        />
-                        {getFieldErrorMessage('transfer')}
-                    </Form.Group>
-
-                    {formData.transfer &&
-                    <Form.Group as={Col} lg={4} xs={12} className="mb-3 form_component">
-                        <Form.Label className="form_label">Время отправления</Form.Label>
-                        <Select
-                            styles={colourStyles}
-                            placeholder="00:00" 
-                            name='departure_time' 
-                            id='departure_time'
-                            className={getFieldClassName('departure_time')}
-                            value={formData.departure_time || ''}
-                            onChange={handleSelectChange}
-                            options={formData.transfer.value === "Одинцово" ? Odi : PP}
-                        />
-                        {getFieldErrorMessage('departure_time')}
-                    </Form.Group> 
-                    } 
                 </Row>
+
+                {fields.map((field, index) => (
+                    <>{index !== 0 && (
+                        <Row className="mb-5 gy-5">
+                            <Form.Group key={index} as={Col} lg={9} xs={9} className='form_component'>
+                                <Form.Label className="form_label">С кем хочешь жить? (ФИО {index}-го человека)</Form.Label>
+                                <Form.Control
+
+                                    
+                                    id={'FIO' + index}
+                                    type='text'
+                                    placeholder="Фазылова Элиза Флоридовна"
+                                    className={getFieldClassName('people_custom')}
+                                    value={field.FIO}
+                                    onChange={(event) => handleFullNameChange(index, event.target.value)} />
+                                {getFieldErrorMessage('people_custom')}
+                            </Form.Group>
+                            <Button type="button" as={Col} lg={1} xs={3} onClick={() => handleDeleteField(index)} className='remove_btn'><Image src={cls_button} className='mx-auto d-block img-fluid'/></Button>
+                            
+                        </Row>
+                        )}
+                        
+                    </>
+                    
+                ))}
+
+                {fields.length <= 4 && ( 
+                    <Row>
+                        <Button type="button" as={Col} lg={6} xs={6} onClick={handleAddField} className='add_btn'><Image src={add_button} className='d-block img-fluid'/> Добавить человека</Button>
+                    </Row>
+                )}
+                
+
+
                 
                 <Container fluid className='d-flex align-middle justify-content-center py-5'>
-                    <button type="submit"  className="mb-2 form_btn__transfer_white wow fadeIn"  data-wow-duration="2s">
+                    
+                    <button type="submit"  className="mb-2 form_btn__resettlement_white wow fadeIn"  data-wow-duration="2s">
                         <span className="btn_label">
                             Отправить  
                         </span>
@@ -358,18 +431,14 @@ export const Form_aggr = () => {
 
             <Modal size="lg" centered show={showModal} onHide={handleCloseModal}>
 
-                <Container className='sun1-transfer-wrapper'>
-                    <Image src={sun} className='sun1-transfer'/>
-                </Container>
-
-                <Container className='sun2-transfer-wrapper'>
-                    <Image src={sun} className='sun2-transfer'/>
+                <Container className='sun1-resettlement-wrapper'>
+                    <Image src={sun} className='sun1-resettlement'/>
                 </Container>
                 
                 <Modal.Body className='mx-1 my-1'>
                     <Popup_inner />
                     <Container fluid className='d-flex align-middle justify-content-center pb-5'>
-                        <button onClick={event =>  window.location.href='/'} className="mb-2 form_btn__transfer_white_popup"  data-wow-duration="2s">
+                        <button onClick={event =>  window.location.href='/'} className="mb-2 form_btn__resettlement_white_popup"  data-wow-duration="2s">
                             <span className="btn_label">
                                 Вернуться на главную
                             </span>
